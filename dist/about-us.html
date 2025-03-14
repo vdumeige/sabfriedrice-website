@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="./assets/favicon/manifest.json" />
+    <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+    <meta name="msapplication-config" content="./assets/favicon/browserconfig.xml" />
+    <meta name="theme-color" content="#ffffff" />
+    
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="./assets/css/libs.bundle.css" />
+    
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="./assets/css/theme.bundle.css" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <!-- Map -->
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css" />
+    
+    <!-- 
+      Color mode switch
+      - For demonstration purposes only
+      - If you do not have the possibility to store user preferences on the backend, I highly recommend switching to a media query implementation: https://getbootstrap.com/docs/5.3/customize/color-modes/#building-with-sass
+    -->
+    <script>
+      (() => {
+        window.addEventListener('DOMContentLoaded', () => {
+          const colorModeSwitch = document.getElementById('colorModeSwitch');
+          if (colorModeSwitch) {
+            colorModeSwitch.addEventListener('change', () => {
+              document.body.setAttribute('data-bs-theme', colorModeSwitch.checked ? 'dark' : 'light');
+            });
+          }
+        });
+      })();
+    </script>
+    
+    <!-- Title -->
+    <title>Touché - Café &amp; Restaurant Template</title>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-dark navbar-expand-lg navbar-togglable fixed-top">
+      <div class="container">
+        <!-- Navbar brand (mobile) -->
+        <a class="navbar-brand d-lg-none" href="./index.html">
+          <img src="assets/img/Sab2-png.png" alt="Sab Fried Rice Logo" style="max-height: 40px;">
+        </a>
+    
+        <!-- Navbar toggler -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <!-- Navbar collapse -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <!-- Left navbar nav -->
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="./about-us.html" style="font-size: 1.3rem; font-weight: 500; padding: 0.5rem 1rem;">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="./menu.html" style="font-size: 1.3rem; font-weight: 500; padding: 0.5rem 1rem;">Menu</a>
+            </li>
+          </ul>
+    
+          <!-- Navbar brand (centered) -->
+          <a class="navbar-brand d-none d-lg-block mx-lg-0 position-absolute start-50 translate-middle-x" href="./index.html" style="top: 50%;">
+            <img src="assets/img/Sab2-png.png" alt="Sab Fried Rice Logo" style="max-height: 40px; margin-top: -47px;">
+          </a>
+          
+          <!-- Right navbar nav -->
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link " href="./gallery.html" style="font-size: 1.3rem; font-weight: 500; padding: 0.5rem 1rem;">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="./contact-us.html" style="font-size: 1.3rem; font-weight: 500; padding: 0.5rem 1rem;">Contact</a>
+            </li>
+            
+            <!-- Color mode -->
+            <li class="nav-item">
+              <div class="form-check form-switch form-switch-color-mode ms-2 mt-2">
+                <input class="form-check-input" type="checkbox" role="switch" id="colorModeSwitch" />
+                <label class="form-check-label" for="colodeModeSwitch"></label>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- HEADER -->
+    <header data-jarallax data-speed=".8" style="background-image: url(assets/img/about-us-background.jpg)">
+      <div class="pt-10 pb-8 pt-md-15 pb-md-13 bg-black bg-opacity-50">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6 text-center">
+              <!-- Heading -->
+              <h1 class="display-6 fw-bold text-white">About Us</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- DISCOVER -->
+    <section class="py-7 py-md-9">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2">
+            <!-- Divider -->
+            <hr class="hr-sm text-primary" />
+
+            <!-- Text -->
+            <p class="fs-lg lh-lg text-body-emphasis mb-5 mb-md-0">We love what we do.</p>
+          </div>
+          <div class="col-md-4">
+            <!-- Media -->
+            <div class="media-decoration media-decoration-1 mb-5 mb-md-0">
+              <!-- Border -->
+              <div class="media-decoration-border" data-jarallax-element="-40"></div>
+
+              <!-- Image -->
+              <img class="media-decoration-img img-fluid" src="assets/img/about-us-sub.jpg" alt="..." />
+            </div>
+          </div>
+          <div class="col-md-5 align-self-center mx-auto">
+            <!-- Heading -->
+            <h2 class="mb-2"><em>Always</em> amazing experience</h2>
+
+            <!-- Text -->
+            <p class="mb-0">
+              At Sab Fried Rice, we're passionate about bringing authentic Thai flavors to Fort Smith, Arkansas. Our family-owned restaurant combines traditional recipes passed down through generations with locally sourced ingredients to create memorable dining experiences. Since opening our doors, we've been dedicated to sharing the vibrant tastes of Thailand while providing warm hospitality that makes every guest feel like family.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUOTE -->
+    <section class="py-7 py-md-9 bg-light">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 col-lg-6 text-center">
+            <!-- Heading -->
+            <h2 class="mb-4">What Our Guests Say</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 text-center">
+            <!-- Icon -->
+            <span class="display-1 font-serif text-primary">"</span>
+
+            <!-- Blockquote -->
+            <figure class="mb-0">
+              <blockquote class="blockquote mb-0">
+                <p class="font-serif text-body-emphasis mb-6">
+                  Fresh ingredients well prepared and presented. They don't cut any corners and the food is fantastic. 
+                  I've paid much more for mediocre food in upscale restaurants. The curry and noodles have a variety of fresh vegetables and great flavor. The spring rolls are the freshest I've ever had.
+                </p>
+              </blockquote>
+              <figcaption class="blockquote-footer text-xs mb-0">Kirby via Yelp</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFO -->
+    <section class="py-7 py-md-9">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 col-lg-6 text-center">
+            <!-- Heading -->
+            <h2 class="mb-2">Behind the scenes</h2>
+
+            <!-- Subheading -->
+            <p class="mb-6">
+              Every dish at Sab Fried Rice tells a story of tradition, passion, and the journey that brought authentic Thai cuisine to the heart of Fort Smith.
+            </p>
+          </div>
+        </div>
+        <div class="row align-items-center justify-content-between">
+          <div class="col-md-6 order-md-2">
+            <!-- Image -->
+            <img class="img-fluid mw-md-120 clip-top-start" src="assets/img/sab-fried-rice.jpg" alt="..." />
+          </div>
+          <div class="col-md-5 order-md-1">
+            <!-- Text -->
+            <p class="lead text-body-emphasis">
+              From humble beginnings in a small kitchen in Bangkok to becoming Fort Smith's beloved Thai destination, our culinary journey spans generations and continents.
+            </p>
+
+            <!-- Text -->
+            <p class="mb-6">
+              Our kitchen is where magic happens daily. Each morning begins with the preparation of fresh ingredients and handcrafted sauces that form the foundation of our menu. Our chefs, trained in traditional Thai cooking methods, carefully balance the four fundamental Thai flavors – sweet, sour, salty, and spicy – to create dishes that transport you straight to the streets of Thailand. 
+              We're committed to preserving authenticity while embracing the local Arkansas community that has welcomed us with open arms.
+            </p>
+
+            <!-- Text -->
+            <p class="mb-md-0">
+              <a class="btn btn-outline-primary" href="contact-us.html"> Contact Us </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAP -->
+    <section class="bg-light" data-map='{"center": [-94.41029252410841, 35.37874523650219], "zoom": 15}' style="height: 30rem"></section>
+
+    <!-- FOOTER -->
+    <footer class="py-7 py-md-9 bg-black">
+      <div class="container px-4">
+        <div class="row gx-7">
+          <div class="col-sm-4">
+            <!-- Heading -->
+            <h5 class="text-xs text-primary">About Us</h5>
+    
+            <!-- Text -->
+            <p class="mb-6">
+              At Sab Fried Rice, we're passionate about bringing authentic Thai flavors to Fort Smith, Arkansas. Our family-owned restaurant combines traditional recipes passed down through generations with locally sourced ingredients to create memorable dining experiences. Since opening our doors, we've been dedicated to sharing the vibrant tastes of Thailand while providing warm hospitality that makes every guest feel like family.
+            </p>
+          </div>
+          <div class="col-sm-4">
+            <!-- Heading -->
+            <h5 class="text-xs text-primary">Contact info</h5>
+    
+            <!-- List -->
+            <ul class="list-unstyled mb-6">
+              <li class="d-flex mb-2">
+                <div class="fas fa-map-marker-alt me-3 mt-2 fs-sm"></div>
+                2100 Rogers Ave Fort Smith, AR 72901
+              </li>
+              <li class="d-flex mb-2">
+                <div class="fas fa-phone me-3 mt-2 fs-sm"></div>
+                +1 479 551 2009
+              </li>
+              <!--
+              <li class="d-flex">
+                <div class="far fa-envelope me-3 mt-2 fs-sm"></div>
+                <a href="mailto:admin@domain.com">admin@domain.com</a>
+              </li> -->
+            </ul>
+          </div>
+          <div class="col-sm-4">
+            <!-- Heading -->
+            <h5 class="text-xs text-primary">Opening hours</h5>
+    
+            <!-- Text -->
+            <div class="mb-6">
+              <div class="text-xs">Monday - Sunday</div>
+              <div class="font-serif">11:00 AM - 08:00 PM</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <!-- Copyright -->
+            <div class="d-flex align-items-center">
+              <hr class="hr-sm me-3" style="height: 1px" />
+              &copy; 2025 Sab Fried Frice. All rights reserved.
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- TOAST -->
+    <div class="toast position-fixed bottom-0 start-50 translate-middle-x mb-3 mb-md-5" id="notification" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body mx-auto"></div>
+      </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <!-- Vendor JS -->
+    <script src="./assets/js/vendor.bundle.js"></script>
+    
+    <!-- Theme JS -->
+    <script src="./assets/js/theme.bundle.js"></script>
+  </body>
+</html>

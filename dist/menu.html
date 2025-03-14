@@ -1,0 +1,2538 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="./assets/favicon/manifest.json" />
+    <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+    <meta name="msapplication-config" content="./assets/favicon/browserconfig.xml" />
+    <meta name="theme-color" content="#ffffff" />
+    
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="./assets/css/libs.bundle.css" />
+    
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="./assets/css/theme.bundle.css" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <!-- Map -->
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css" />
+    
+    <!-- 
+      Color mode switch
+      - For demonstration purposes only
+      - If you do not have the possibility to store user preferences on the backend, I highly recommend switching to a media query implementation: https://getbootstrap.com/docs/5.3/customize/color-modes/#building-with-sass
+    -->
+    <script>
+      (() => {
+        window.addEventListener('DOMContentLoaded', () => {
+          const colorModeSwitch = document.getElementById('colorModeSwitch');
+          if (colorModeSwitch) {
+            colorModeSwitch.addEventListener('change', () => {
+              document.body.setAttribute('data-bs-theme', colorModeSwitch.checked ? 'dark' : 'light');
+            });
+          }
+        });
+      })();
+    </script>
+    
+    <!-- Title -->
+    <title>Touché - Café &amp; Restaurant Template</title>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-dark navbar-expand-lg navbar-togglable fixed-top">
+      <div class="container">
+        <!-- Navbar brand (mobile) -->
+        <a class="navbar-brand d-lg-none" href="./index.html">
+          <img src="assets/img/Sab2-png.png" alt="Sab Fried Rice Logo" style="max-height: 40px;">
+        </a>
+    
+        <!-- Navbar toggler -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <!-- Navbar collapse -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <!-- Left navbar nav -->
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link " href="./about-us.html" style="font-size: 1.3rem; font-weight: 500; padding: 0.5rem 1rem;">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./menu.html" style="font-size: 1.3rem; font-weight: 500; padding: 0.5rem 1rem;">Menu</a>
+            </li>
+          </ul>
+    
+          <!-- Navbar brand (centered) -->
+          <a class="navbar-brand d-none d-lg-block mx-lg-0 position-absolute start-50 translate-middle-x" href="./index.html" style="top: 50%;">
+            <img src="assets/img/Sab2-png.png" alt="Sab Fried Rice Logo" style="max-height: 40px; margin-top: -47px;">
+          </a>
+          
+          <!-- Right navbar nav -->
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link " href="./gallery.html" style="font-size: 1.3rem; font-weight: 500; padding: 0.5rem 1rem;">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="./contact-us.html" style="font-size: 1.3rem; font-weight: 500; padding: 0.5rem 1rem;">Contact</a>
+            </li>
+            
+            <!-- Color mode -->
+            <li class="nav-item">
+              <div class="form-check form-switch form-switch-color-mode ms-2 mt-2">
+                <input class="form-check-input" type="checkbox" role="switch" id="colorModeSwitch" />
+                <label class="form-check-label" for="colodeModeSwitch"></label>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- HEADER -->
+    <header data-jarallax data-speed=".8" style="background-image: url('/img/menu-background.jpg')">  
+      <div class="pt-10 pb-8 pt-md-15 pb-md-13 bg-black bg-opacity-50">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6 text-center">
+              <h1 class="display-6 fw-bold text-white">Our menu</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MENU -->
+    <section class="py-7 py-md-9 border-bottom">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 col-lg-6 text-center">
+            <h2 class="mb-2">Explore Our Menu</h2>
+            <p class="mb-6">
+              Explore our diverse menu offerings, carefully crafted with authentic ingredients and traditional cooking techniques. Each dish reflects our commitment to quality and flavor, bringing you a truly exceptional dining experience.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <!-- Navigation -->
+            <div class="nav justify-content-center mb-6" id="menuTabs" role="tablist">
+              <a class="nav-link active" id="appetizersTab" data-bs-toggle="tab" href="#appetizers" role="tab" aria-controls="appetizers" aria-selected="true"> Appetizers & Sides </a>
+              <a class="nav-link" id="dessertsTab" data-bs-toggle="tab" href="#desserts" role="tab" aria-controls="desserts"> Desserts & Others </a>
+              <a class="nav-link" id="entreesTab" data-bs-toggle="tab" href="#entrees" role="tab" aria-controls="entrees"> Entrées & Curries </a>
+              <a class="nav-link" id="noodlesTab" data-bs-toggle="tab" href="#noodles" role="tab" aria-controls="noodles"> Noodle & Rice Dishes </a>
+              <a class="nav-link" id="soupsTab" data-bs-toggle="tab" href="#soups" role="tab" aria-controls="soups"> Soups & Salads </a>
+              <a class="nav-link" id="specialsTab" data-bs-toggle="tab" href="#specials" role="tab" aria-controls="specials"> Specials </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="tab-content" id="menuContent">
+
+              <!-- Appetizers & Sides -->
+              <div class="tab-pane fade show active" id="appetizers" role="tabpanel" aria-labelledby="appetizersTab">
+                <div class="row">
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="1/2 Sab Thai Fried Rice Chicken" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">1/2 Sab Thai Fried Rice Chicken</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$5</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/satay-chicken.jpg" 
+                                              alt="Chicken Satay" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Chicken Satay</h5>
+                                      <p class="mb-0">Satay refers to skewered marinated meats that are grilled and served with peanut sauce.</p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$6.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/chicken-wings.jpg" 
+                                              alt="Chicken Wings" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Chicken Wings</h5>
+                                      <p class="mb-0">Coated in a seasoned flour mixture to ensure golden and crispy texture.</p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$8.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/cream-cheese-wonton.jpg" 
+                                              alt="Cream Cheese Wonton" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Cream Cheese Wonton</h5>
+                                      <p class="mb-0">Crispy on the outside with a creamy, tender inside.</p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$5.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/edamame.jpg" 
+                                              alt="Edamame (Garlic Sauce)" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Edamame (Garlic Sauce)</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$4.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/egg-roll.jpg" 
+                                              alt="Egg Rolls Pork" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Egg Rolls Pork</h5>
+                                      <p class="mb-0">Savor a Vietnamese starter: rice paper wrapped with pork and vegetables, deep-fried to perfection.</p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$5.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/fresh-roll.jpg" 
+                                              alt="Fresh Spring Rolls" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Fresh Spring Rolls</h5>
+                                      <p class="mb-0">Savor a Vietnamese starter: rice paper wrapped with fresh vegetables and shrimp, served with peanut sauce.</p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$5.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/Fried-tofu.jpg" 
+                                              alt="Fried Tofu" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Fried Tofu</h5>
+                                      <p class="mb-0">Deep-fried lightly until crispy and golden brown.</p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$3.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/sarong-shrimp.jpg" 
+                                              alt="Kung Sarong" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Kung Sarong</h5>
+                                      <p class="mb-0">A Thai dish containing deep-fried prawns wrapped in crispy noodles.</p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$6.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/kung-banket.jpg" 
+                                              alt="Kung with Blanket" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Kung with Blanket</h5>
+                                      <p class="mb-0">A Hong Kong-style side dish with deep-fried prawns wrapped in a crispy blanket.</p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$6.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Peanut Sauce (Large)" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Peanut Sauce (Large)</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$4</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Peanut Sauce (Small)" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Peanut Sauce (Small)</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$2</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/pork-stick.jpg" 
+                                              alt="Pork Stick (Moo Saiy Mai)" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Pork Stick (Moo Saiy Mai)</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$6.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/pot-sticker.jpg" 
+                                              alt="Potstickers (Dumpling)" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Potstickers (Dumpling)</h5>
+                                      <p class="mb-0">Steamed and then pan-fried dumplings filled with ground pork and cabbage. Crispy bottoms and flavorful, served with sweet soy sauce.</p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$3.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/sab-sampler.jpg" 
+                                              alt="Sab Sampler" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Sab Sampler</h5>
+                                      <p class="mb-0">Started your meal with an assortment appetizer including 2 of each Chicken Satay, Cream Cheese Wonton, Egg roll, Spring roll, Chicken wing, Potsticker. Comes with 3 sauces: peanut sauce, plum sauce, and sweet soy sauce.</p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$12.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Steamed Chicken, Pork, Beef" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Steamed Chicken, Pork, Beef</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$5</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Steamed Noodle (Large)" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Steamed Noodle (Large)</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$5</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Steamed Noodle (Small)" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Steamed Noodle (Small)</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$3</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Steamed Vegetables (Large)" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Steamed Vegetables (Large)</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$5</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Steamed Vegetables (Small)" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Steamed Vegetables (Small)</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$3</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Steamed White Rice (Large)" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Steamed White Rice (Large)</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$4</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Steamed White Rice (Small)" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Steamed White Rice (Small)</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$2</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Vegetarian Egg Rolls" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Vegetarian Egg Rolls</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$5.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                </div>
+              </div>
+
+              <!-- Desserts & Others -->
+              <div class="tab-pane fade" id="desserts" role="tabpanel" aria-labelledby="dessertsTab">
+                <div class="row">
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Combination Desserts" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Combination Desserts</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$7</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Dessert of the Day" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Dessert of the Day</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$6</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Fried Banana with Ice Cream" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Fried Banana with Ice Cream</h5>
+                                      <p class="mb-0">Deep-fried bananas served with ice cream.</p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$6</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Sweet Rice w/ Ice Cream and Palm Seeds" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Sweet Rice w/ Ice Cream and Palm Seeds</h5>
+                                      <p class="mb-0">Sticky rice served with ice cream and palm seeds.</p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$6</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Sweet Rice with Mango" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Sweet Rice with Mango</h5>
+                                      <p class="mb-0">Traditional Thai sticky rice with fresh mango (seasonal).</p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$6</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Woon KraDhi (Coconut Milk Agar Jelly)" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Woon KraDhi (Coconut Milk Agar Jelly)</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$6</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                </div>
+              </div>
+
+              <!-- Entrées & Curries -->
+              <div class="tab-pane fade" id="entrees" role="tabpanel" aria-labelledby="entreesTab">
+                <div class="row">
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/broccoli.jpg" 
+                                              alt="Broccoli Stir-Fry" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Broccoli Stir-Fry</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$11.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/cashewnut.jpg" 
+                                              alt="Cashew Nut Stir-Fry" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Cashew Nut Stir-Fry</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$11.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Garlic and Pepper Stir-Fry" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Garlic and Pepper Stir-Fry</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$11.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/green-curry.jpg" 
+                                              alt="Green Curry" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Green Curry</h5>
+                                      <p class="mb-0">A milder Thai curry made with green curry paste, Thai eggplant, bamboo shoots, bell peppers, potatoes, carrots, and basil.</p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$11.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Massaman Curry" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Massaman Curry</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$11.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/pad-ka-pow.jpg" 
+                                              alt="Pad Kra Paow" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Pad Kra Paow</h5>
+                                      <p class="mb-0">Stir-fried onions, bell peppers, jalapeños, carrots, mushrooms, and basil in krapaow sauce.</p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$11.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Pad Pick (Spicy Garlic Sauce)" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Pad Pick (Spicy Garlic Sauce)</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$11.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/panang.jpg" 
+                                              alt="Panaeng Curry" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Panaeng Curry</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$11.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/pra-ram.jpg" 
+                                              alt="Pra Ram (Peanut Sauce)" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Pra Ram (Peanut Sauce)</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$11.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Red Curry" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Red Curry</h5>
+                                      <p class="mb-0">A spicy, sweet, and rich Thai curry with red curry paste cooked in coconut milk, Thai eggplant, bamboo shoots, bell peppers, potatoes, carrots, and basil.</p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$11.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/sweetandsour.jpg" 
+                                              alt="Sweet &amp; Sour Stir-Fry" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Sweet &amp; Sour Stir-Fry</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$11.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Vegetable Delight" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Vegetable Delight</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$11.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/yellow-curry.jpg" 
+                                              alt="Yellow Curry" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Yellow Curry</h5>
+                                      <p class="mb-0">A mild curry with yellow curry powder, onion, bell peppers, potatoes, and carrots.</p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$11.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Young Ginger Stir-Fry" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Young Ginger Stir-Fry</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$11.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                </div>
+              </div>
+
+              <!-- Noodle & Rice Dishes -->
+              <div class="tab-pane fade" id="noodles" role="tabpanel" aria-labelledby="noodlesTab">
+                <div class="row">
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Bacon Fried Rice" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Bacon Fried Rice</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$13.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/chow-mean.jpg" 
+                                              alt="Chow Mein Noodle" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Chow Mein Noodle</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$12.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/me-kob.jpg" 
+                                              alt="Crispy Noodle (Mee Kob)" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Crispy Noodle (Mee Kob)</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$12.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Curry Noodle with Grilled Chicken" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Curry Noodle with Grilled Chicken</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$13.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Dry Noodle Roasted Red Pork" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Dry Noodle Roasted Red Pork</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$12.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Khaow Na Moo" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Khaow Na Moo</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$13.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Khaow Pad Moo Deang" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Khaow Pad Moo Deang</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$13.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Khaow Ra Vin Yarn" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Khaow Ra Vin Yarn</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$13.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Khow Mun Kai" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Khow Mun Kai</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$13.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Khow Mun Moo" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Khow Mun Moo</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$13.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/kua-noodle.jpg" 
+                                              alt="Kua Noodle" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Kua Noodle</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$12.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/lad-na.jpg" 
+                                              alt="Lard Na" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Lard Na</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$12.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/pad-ke-mow.jpg" 
+                                              alt="Pad Ke Mow (Drunken Noodles)" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Pad Ke Mow (Drunken Noodles)</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$12.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Pad Mee (Mama Noodle)" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Pad Mee (Mama Noodle)</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$12.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Pad See Iw" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Pad See Iw</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$12.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/pad-thai-beef.jpg" 
+                                              alt="Pad Thai" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Pad Thai</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$11.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Pad Udon (Udon Noodle)" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Pad Udon (Udon Noodle)</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$12.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/pad-won-sen.jpg" 
+                                              alt="Pad Woon Sen (Stir-Fried Glass Noodle)" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Pad Woon Sen (Stir-Fried Glass Noodle)</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$12.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/fried-rice.jpg" 
+                                              alt="Pineapple Fried Rice" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Pineapple Fried Rice</h5>
+                                      <p class="mb-0">Jasmine rice stir-fried with egg, pineapple, onions, peas, carrots, cashew nuts, and curry powder in house soy sauce.</p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$11.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/sab-fried-rice.jpg" 
+                                              alt="Sab Fried Rice" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Sab Fried Rice</h5>
+                                      <p class="mb-0">Jasmine rice stir-fried with egg, onions, scallions, peas, and carrots in house soy sauce.</p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$11.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/nam-khao.jpg" 
+                                              alt="Sab Fried Rice Nam Khao" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Sab Fried Rice Nam Khao</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$12.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/spicy-fried-rice.jpg" 
+                                              alt="Spicy Fried Rice" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Spicy Fried Rice</h5>
+                                      <p class="mb-0">Jasmine rice stir-fried with bell peppers, fresh basil, broccoli, and carrots in garlic and chili sauce.</p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$11.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                </div>
+              </div>
+
+              <!-- Soups & Salads -->
+              <div class="tab-pane fade" id="soups" role="tabpanel" aria-labelledby="soupsTab">
+                <div class="row">
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/egg-soup.jpg" 
+                                              alt="Egg Drop Soup" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Egg Drop Soup</h5>
+                                      <p class="mb-0">A silky Chinese soup featuring strands of eggs in chicken broth, with green onion for flavor.</p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$4.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/khow-piek.jpg" 
+                                              alt="Khaow Piek (Homemade Noodle)" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Khaow Piek (Homemade Noodle)</h5>
+                                      <p class="mb-0">A popular Lao noodle soup with freshly hand-cut rice tapioca noodles in a fragrant ginger broth, garnished with green onions, cilantro, and fried garlic.</p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$12.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/chicken-larb.jpg" 
+                                              alt="Laab (Chicken, Pork, Beef)" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Laab (Chicken, Pork, Beef)</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$12.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/larb-beef.jpg" 
+                                              alt="Laab Beef (Lao Style with Sticky Rice)" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Laab Beef (Lao Style with Sticky Rice)</h5>
+                                      <p class="mb-0">A special dish for ceremonies and parties. Made with rare lean ground beef soaked in special laab sauce, then finished with fresh herbs.</p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$15.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/papaya.jpg" 
+                                              alt="Lao Style Papaya Salad" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Lao Style Papaya Salad</h5>
+                                      <p class="mb-0">A spicy Lao papaya salad known as Tum Mak Hoong, made with shredded green papaya, tomatoes, chilies, garlic, lime, and Laotian seasoning.</p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$10.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/pho.jpg" 
+                                              alt="Pho (Vietnamese Noodle Soup)" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Pho (Vietnamese Noodle Soup)</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$11.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/sukiyaki.jpg" 
+                                              alt="Sukiyaki (Glass Noodle Soup)" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Sukiyaki (Glass Noodle Soup)</h5>
+                                      <p class="mb-0">A bowl of glass noodles, mixed vegetables, and egg in a fragrant ginger broth seasoned with house sukiyaki sauce.</p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$12.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Thai Style Papaya Salad" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Thai Style Papaya Salad</h5>
+                                      <p class="mb-0">Crunchy strips of unripe green papaya with chilies, garlic, roasted peanuts, tomatoes, and spicy tamarind-lime dressing.</p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$10.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/tom-khar.jpg" 
+                                              alt="Tom Khar Combination Seafood Coconut Soup" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Tom Khar Combination Seafood Coconut Soup</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$15.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Tom Khar Gai (Chicken Coconut Soup)" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Tom Khar Gai (Chicken Coconut Soup)</h5>
+                                      <p class="mb-0">A rich and creamy Thai chicken coconut soup with tangy, salty flavors from fresh lime juice, lemongrass, galangal, and makrut lime leaves.</p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$12.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Tom Khar Kung (Shrimp Coconut Soup)" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Tom Khar Kung (Shrimp Coconut Soup)</h5>
+                                      <p class="mb-0">A variation of Tom Kha Gai, substituting shrimp for chicken.</p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$13.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Tom Sab (Pork Rib Soup)" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Tom Sab (Pork Rib Soup)</h5>
+                                      <p class="mb-0">A brothy, spicy, and sour soup with boiled pork ribs, tomatoes, and aromatic herbs: lemongrass, galangal, and makrut lime leaves.</p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$13.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Tom Yum Chicken" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Tom Yum Chicken</h5>
+                                      <p class="mb-0">A brothy, spicy, and sour soup with chicken, mushrooms, and tomatoes, infused with lemongrass, galangal, and makrut lime leaves.</p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$12.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/tom-yum.jpg" 
+                                              alt="Tom Yum Combination Seafood Soup" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Tom Yum Combination Seafood Soup</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$15.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Tom Yum Kung (Shrimp Soup)" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Tom Yum Kung (Shrimp Soup)</h5>
+                                      <p class="mb-0">A variation of Tom Yum Chicken, substituting shrimp for chicken.</p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$13.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Tum Mour Lao Style" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Tum Mour Lao Style</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$15.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/wonton-soup.jpg" 
+                                              alt="Wonton &amp; Noodle Soup" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Wonton &amp; Noodle Soup</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$12.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Wonton Soup" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Wonton Soup</h5>
+                                      <p class="mb-0">A Chinese classic with pork-filled dumplings in seasoned chicken broth, with bok choy, green onion, and cilantro.</p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$11.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Yum Kai (Chicken)/Nuea (Beef)" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Yum Kai (Chicken)/Nuea (Beef)</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$12.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Yum Talay (Seafood Salad)" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Yum Talay (Seafood Salad)</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$15.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Yum Won Sen (Glass Noodles)" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Yum Won Sen (Glass Noodles)</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$12.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                </div>
+              </div>
+
+              <!-- Specials -->
+              <div class="tab-pane fade" id="specials" role="tabpanel" aria-labelledby="specialsTab">
+                <div class="row">
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Bang Bang Chicken" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Bang Bang Chicken</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$12.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Beef/Pork Jerky" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Beef/Pork Jerky</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$10.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/chicken-teriyaki.jpg" 
+                                              alt="Chicken Teriyaki" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Chicken Teriyaki</h5>
+                                      <p class="mb-0">Grilled chicken marinated in a seasoned soy sauce glaze, served with steamed rice.</p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$12.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/choochee.jpg" 
+                                              alt="Choo Chee Fish" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Choo Chee Fish</h5>
+                                      <p class="mb-0">Deep-fried tilapia fish in a flavorful Choo Chee curry, balancing sweet, sour, and spicy flavors.</p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$14.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Lao Sausage with Sticky Rice" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Lao Sausage with Sticky Rice</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$12.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Moo Yang (BBQ Pork)" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Moo Yang (BBQ Pork)</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$13.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Naem Neuang" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Naem Neuang</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$25</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/orange.chicken.jpg" 
+                                              alt="Orange Chicken" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Orange Chicken</h5>
+                                      <p class="mb-0">An American-Chinese dish of fried chicken glazed with sweet orange-flavored chili sauce.</p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$12.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Pork Rib" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Pork Rib</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$10.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/pra-sam-rod.jpg" 
+                                              alt="Pra Sam Rod (Fried Fish with 3 Flavored Sauce)" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Pra Sam Rod (Fried Fish with 3 Flavored Sauce)</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$14.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="py-3 border-bottom">
+                              <div class="row">
+                                  <div class="col-3 align-self-center">
+                                      <div class="ratio ratio-1x1">
+                                          <img class="object-fit-cover" 
+                                              src="/img/default.jpg" 
+                                              alt="Sab Thai Basket" 
+                                              onerror="this.onerror=null; this.src='/img/default.jpg';" />
+                                      </div>
+                                  </div>
+                                  <div class="col-7">
+                                      <h5 class="mb-2">Sab Thai Basket</h5>
+                                      <p class="mb-0"></p>
+                                  </div>
+                                  <div class="col-2">
+                                      <div class="fs-4 font-serif text-center text-body-emphasis">$13.99</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                </div>
+              </div>
+           
+    
+    <!-- DISHES -->
+    <section class="py-7 py-md-9 overflow-hidden">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 col-lg-6 text-center">
+            <!-- Heading -->
+            <h2 class="mb-2">Our <em>featured</em> dishes</h2>
+
+            <!-- Subheading -->
+            <p class="mb-6">
+              Savor the Flavors of Thailand, Crafted in the Heart of Fort Smith.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <!-- Slider -->
+            <div class="flickity-viewport-visible" data-flickity='{"cellAlign": "left", "contain": true, "imagesLoaded": true, "pageDots": false}'>
+              <div class="w-100 px-2" style="max-width: 320px">
+                <!-- Card -->
+                <div class="card border-0">
+                  <!-- Image -->
+                  <img class="card-img-top" src="assets/img/green-curry.jpg" alt="..." />
+
+                  <!-- Body -->
+                  <div class="card-body">
+                    <!-- Heading -->
+                    <div class="row mb-2">
+                      <div class="col">
+                        <h5 class="mb-0">Green Curry</h5>
+                      </div>
+                      <div class="col-auto">
+                        <span class="fs-4 font-serif text-body-emphasis">$11.99</span>
+                      </div>
+                    </div>
+
+                    <!-- Text -->
+                    <p class="mb-0">A vibrant symphony of tender vegetables and aromatic herbs, simmered in a rich, creamy green curry sauce that balances spice, sweetness, and the fresh essence of Thailand.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="w-100 px-2" style="max-width: 320px">
+                <!-- Card -->
+                <div class="card border-0">
+                  <!-- Image -->
+                  <img class="card-img-top" src="assets/img/sab-sampler.jpg" alt="..." />
+
+                  <!-- Body -->
+                  <div class="card-body">
+                    <!-- Heading -->
+                    <div class="row mb-2">
+                      <div class="col">
+                        <h5 class="mb-0">Sab Sampler</h5>
+                      </div>
+                      <div class="col-auto">
+                        <span class="fs-4 font-serif text-body-emphasis">$12.99</span>
+                      </div>
+                    </div>
+
+                    <!-- Text -->
+                    <p class="mb-0">A vibrant culinary journey showcasing the rich tapestry of Thai flavors – crisp, golden delights and delicate morsels artfully arranged, accompanied by an array of signature dipping sauces that dance between sweet, tangy, and bold.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="w-100 px-2" style="max-width: 320px">
+                <!-- Card -->
+                <div class="card border-0">
+                  <!-- Image -->
+                  <img class="card-img-top" src="assets/img/chicken-larb.jpg" alt="..." />
+
+                  <!-- Body -->
+                  <div class="card-body">
+                    <!-- Heading -->
+                    <div class="row mb-2">
+                      <div class="col">
+                        <h5 class="mb-0">Chicken Larb</h5>
+                      </div>
+                      <div class="col-auto">
+                        <span class="fs-4 font-serif text-body-emphasis">$12.99</span>
+                      </div>
+                    </div>
+
+                    <!-- Text -->
+                    <p class="mb-0">Chicken Larb - A vibrant minced chicken salad infused with fresh Thai herbs, lemongrass, and mint leaves, enhanced with a hint of chili and zesty lime dressing. Served with crisp cucumber slices for a refreshing crunch. This iconic northeastern Thai dish delivers a perfect balance of bright flavors and light, satisfying texture.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="w-100 px-2" style="max-width: 320px">
+                <!-- Card -->
+                <div class="card border-0">
+                  <!-- Image -->
+                  <img class="card-img-top" src="assets/img/tom-yum.jpg" alt="..." />
+
+                  <!-- Body -->
+                  <div class="card-body">
+                    <!-- Heading -->
+                    <div class="row mb-2">
+                      <div class="col">
+                        <h5 class="mb-0">Tom Yum Combination Seafood Soup</h5>
+                      </div>
+                      <div class="col-auto">
+                        <span class="fs-4 font-serif text-body-emphasis">$15.99</span>
+                      </div>
+                    </div>
+
+                    <!-- Text -->
+                    <p class="mb-0">A steaming hot pot of Thailand's famous fragrant soup, brimming with succulent shrimp, tender squid, and delicate fish, all swimming in a lemongrass-infused broth. The perfect balance of sour, spicy, and aromatic flavors comes from fresh lime juice, galangal, and kaffir lime leaves, while mushrooms and fresh herbs add depth and complexity. Served in a traditional hot pot to maintain its temperature and allow the flavors to continue developing as you enjoy this invigorating Thai classic.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="w-100 px-2" style="max-width: 320px">
+                <!-- Card -->
+                <div class="card border-0">
+                  <!-- Image -->
+                  <img class="card-img-top" src="assets/img/nam-khao.jpg" alt="..." />  
+
+                  <!-- Body -->
+                  <div class="card-body">
+                    <!-- Heading -->
+                    <div class="row mb-2">
+                      <div class="col">
+                        <h5 class="mb-0">Nam Khao </h5>
+                      </div>
+                      <div class="col-auto">
+                        <span class="fs-4 font-serif text-body-emphasis">$12.99</span>
+                      </div>
+                    </div>
+
+                    <!-- Text -->
+                    <p class="mb-0">Crispy fried rice tossed with savory pork, fresh herbs, and aromatic spices, creating a perfect balance of textures and flavors. Brightened with lime juice and garnished with mint leaves and dried chilies, this northern Thai specialty is served with fresh lettuce leaves for wrapping, offering a delightful contrast of warm, crunchy filling and cool, crisp greens.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="w-100 px-2" style="max-width: 320px">
+                <!-- Card -->
+                <div class="card border-0">
+                  <!-- Image -->
+                  <img class="card-img-top" src="assets/img/yum-kai.jpg" alt="..." />  
+
+                  <!-- Body -->
+                  <div class="card-body">
+                    <!-- Heading -->
+                    <div class="row mb-2">
+                      <div class="col">
+                        <h5 class="mb-0">Yum Kai</h5>
+                      </div>
+                      <div class="col-auto">
+                        <span class="fs-4 font-serif text-body-emphasis">$12.99</span>
+                      </div>
+                    </div>
+
+                    <!-- Text -->
+                    <p class="mb-0">Succulent grilled chicken tossed with crisp vegetables, fresh herbs, and sliced onions in a vibrant Thai-style dressing. The perfect balance of sweet, sour, and spicy flavors comes from lime juice, fish sauce, and chili, while fresh cilantro adds an aromatic finish. Served with colorful purple cabbage and carrots for added crunch and visual appeal, this refreshing salad delivers the authentic taste of Thailand in every bite.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESERVATION -->
+    <section class="py-7 py-md-9 bg-light">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 col-lg-6 text-center">
+            <!-- Heading -->
+            <h2 class="mb-2">Make online reservation</h2>
+
+            <!-- Subheading -->
+            <p class="mb-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam illo praesentium sequi in cum, beatae maiores quae qui.</p>
+          </div>
+        </div>
+        <div class="row justify-content-lg-center">
+          <div class="col-lg-8">
+            <!-- Form -->
+            <form>
+              <div class="row gx-3">
+                <div class="col-md-6">
+                  <!-- Contact number (hidden) -->
+                  <input type="hidden" name="contact_number" />
+
+                  <!-- Full name -->
+                  <div class="mb-3">
+                    <label class="visually-hidden" for="user_name">Full name</label>
+                    <input class="form-control" id="user_name" name="user_name" type="text" placeholder="Full name" required />
+                  </div>
+
+                  <!-- Phone number -->
+                  <div class="mb-3">
+                    <label class="visually-hidden" for="user_phone">Phone number</label>
+                    <input class="form-control" id="user_phone" name="user_phone" type="tel" placeholder="Phone number" required />
+                  </div>
+
+                  <!-- Email address -->
+                  <div class="mb-3">
+                    <label class="visually-hidden" for="user_email">Email address</label>
+                    <input class="form-control" id="user_email" name="user_email" type="email" placeholder="Email address" required />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <!-- Guests -->
+                  <div class="mb-3">
+                    <label class="visually-hidden" for="guests">Guests</label>
+                    <select class="form-select" id="guests" name="guests" required>
+                      <option value="1">1 person</option>
+                      <option value="2" selected="">2 persons</option>
+                      <option value="3">3 persons</option>
+                      <option value="4">4 persons</option>
+                      <option value="5">5 persons</option>
+                    </select>
+                  </div>
+
+                  <!-- Date -->
+                  <div class="mb-3">
+                    <label class="visually-hidden" for="date">Date</label>
+                    <input class="form-control" id="date" name="date" type="date" value="2021-02-12" required />
+                  </div>
+
+                  <!-- Time -->
+                  <div class="mb-3">
+                    <label class="visually-hidden" for="time">Time</label>
+                    <input class="form-control" id="time" name="time" type="time" value="18:00" required />
+                  </div>
+                </div>
+                <div class="col text-center">
+                  <!-- Button -->
+                  <button class="btn btn-outline-primary" type="submit">Reserve a table</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-7 py-md-9 bg-black">
+      <div class="container px-4">
+        <div class="row gx-7">
+          <div class="col-sm-4">
+            <!-- Heading -->
+            <h5 class="text-xs text-primary">About Us</h5>
+    
+            <!-- Text -->
+            <p class="mb-6">
+              At Sab Fried Rice, we're passionate about bringing authentic Thai flavors to Fort Smith, Arkansas. Our family-owned restaurant combines traditional recipes passed down through generations with locally sourced ingredients to create memorable dining experiences. Since opening our doors, we've been dedicated to sharing the vibrant tastes of Thailand while providing warm hospitality that makes every guest feel like family.
+            </p>
+          </div>
+          <div class="col-sm-4">
+            <!-- Heading -->
+            <h5 class="text-xs text-primary">Contact info</h5>
+    
+            <!-- List -->
+            <ul class="list-unstyled mb-6">
+              <li class="d-flex mb-2">
+                <div class="fas fa-map-marker-alt me-3 mt-2 fs-sm"></div>
+                2100 Rogers Ave Fort Smith, AR 72901
+              </li>
+              <li class="d-flex mb-2">
+                <div class="fas fa-phone me-3 mt-2 fs-sm"></div>
+                +1 479 551 2009
+              </li>
+              <!--
+              <li class="d-flex">
+                <div class="far fa-envelope me-3 mt-2 fs-sm"></div>
+                <a href="mailto:admin@domain.com">admin@domain.com</a>
+              </li> -->
+            </ul>
+          </div>
+          <div class="col-sm-4">
+            <!-- Heading -->
+            <h5 class="text-xs text-primary">Opening hours</h5>
+    
+            <!-- Text -->
+            <div class="mb-6">
+              <div class="text-xs">Monday - Sunday</div>
+              <div class="font-serif">11:00 AM - 08:00 PM</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <!-- Copyright -->
+            <div class="d-flex align-items-center">
+              <hr class="hr-sm me-3" style="height: 1px" />
+              &copy; 2025 Sab Fried Frice. All rights reserved.
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- TOAST -->
+    <div class="toast position-fixed bottom-0 start-50 translate-middle-x mb-3 mb-md-5" id="notification" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body mx-auto"></div>
+      </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <!-- Vendor JS -->
+    <script src="./assets/js/vendor.bundle.js"></script>
+    
+    <!-- Theme JS -->
+    <script src="./assets/js/theme.bundle.js"></script>
+
+  </body>
+</html>
