@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{> partials/head title="Touché - Café & Restaurant Template"}}
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    {{> partials/navbar variant="dark" toggle="true" page="contact-us.html"}}
+
+    <!-- HEADER -->
+    <header data-jarallax data-speed=".8" style="background-image: url(assets/img/contact-background.jpg)">
+      <div class="pt-10 pb-8 pt-md-15 pb-md-13 bg-black bg-opacity-50">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6 text-center">
+              <!-- Heading -->
+              <h1 class="display-6 fw-bold text-white">Contact Us</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- CONTACT -->
+    <section class="py-7 py-md-9">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 col-lg-6 text-center">
+            <!-- Heading -->
+            <h2 class="mb-2">Contact & Order Information</h2>
+            
+            <!-- Subheading -->
+            <p class="mb-6">Visit us in person or order online through our delivery partners.</p>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-8 text-center">
+            <!-- Contact Info -->
+            <div class="mb-5">
+              <!-- Address -->
+              <div class="mb-4">
+                <h4 class="mb-2 text-xs">Visit us</h4>
+                <p class="font-serif">
+                  <a href="https://maps.google.com/?q=2100+Rogers+Ave+Fort+Smith+AR+72901" target="_blank">
+                    2100 Rogers Ave Fort Smith, AR 72901
+                  </a>
+                </p>
+              </div>
+              
+              <!-- Phone -->
+              <div class="mb-4">
+                <h4 class="mb-2 text-xs">Call us</h4>
+                <p class="font-serif">
+                  <a href="tel:+14795512009">+1 479 551 2009</a>
+                </p>
+              </div>
+              
+              <!-- Order Links -->
+              <div class="mb-5">
+                <h4 class="mb-2 text-xs">Order Online</h4>
+                <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3 mt-4">
+                  <a class="btn btn-primary btn-lg d-flex align-items-center px-4 py-3 shadow-sm" href="#" style="min-width: 200px;">
+                    <i class="fas fa-utensils me-2"></i>
+                    <span>Order on Grubhub</span>
+                  </a>
+                  <a class="btn btn-danger btn-lg d-flex align-items-center px-4 py-3 shadow-sm" href="#" style="min-width: 200px;">
+                    <i class="fas fa-motorcycle me-2"></i>
+                    <span>Order on DoorDash</span>
+                  </a>
+                </div>
+              </div>
+              
+              <!-- Social Links -->
+              <div class="mb-4">
+                <h4 class="mb-2 text-xs">Follow us</h4>
+                <div class="d-flex justify-content-center gap-4 font-serif">
+                  <a class="d-block fs-3" href="#" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a class="d-block fs-3" href="#" aria-label="Yelp">
+                    <i class="fab fa-yelp"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- MAP -->
+    <section class="bg-light" data-map='{"center": [-94.41029252410841, 35.37874523650219], "zoom": 15}' style="height: 30rem"></section>
+
+    <!-- FOOTER -->
+    {{> partials/footer}}
+
+    <!-- TOAST -->
+    {{> partials/toast}}
+
+    <!-- JAVASCRIPT -->
+    {{> partials/scripts}}
+  </body>
+</html>

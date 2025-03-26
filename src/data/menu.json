@@ -1,0 +1,681 @@
+[
+    {
+        "category": "Appetizers & Sides",
+        "dish": "1/2 Sab Thai Fried Rice Chicken",
+        "price": 5.0,
+        "description": null,
+        "image": "default.jpg"
+    },
+    {
+        "category": "Appetizers & Sides",
+        "dish": "Chicken Satay",
+        "price": 6.99,
+        "description": "Satay refers to skewered marinated meats that are grilled and served with peanut sauce.",
+        "image": "satay-chicken.jpg"
+    },
+    {
+        "category": "Appetizers & Sides",
+        "dish": "Chicken Wings",
+        "price": 8.99,
+        "description": "Coated in a seasoned flour mixture to ensure golden and crispy texture.",
+        "image": "chicken-wings.jpg"
+    },
+    {
+        "category": "Appetizers & Sides",
+        "dish": "Cream Cheese Wonton",
+        "price": 5.99,
+        "description": "Crispy on the outside with a creamy, tender inside.",
+        "image": "cream-cheese-wonton.jpg"
+    },
+    {
+        "category": "Appetizers & Sides",
+        "dish": "Edamame (Garlic Sauce)",
+        "price": 4.99,
+        "description": null,
+        "image": "edamame.jpg"
+    },
+    {
+        "category": "Appetizers & Sides",
+        "dish": "Egg Rolls Pork",
+        "price": 5.99,
+        "description": "Savor a Vietnamese starter: rice paper wrapped with pork and vegetables, deep-fried to perfection.",
+        "image": "egg-roll.jpg"
+    },
+    {
+        "category": "Appetizers & Sides",
+        "dish": "Fresh Spring Rolls",
+        "price": 5.99,
+        "description": "Savor a Vietnamese starter: rice paper wrapped with fresh vegetables and shrimp, served with peanut sauce.",
+        "image": "fresh-roll.jpg"
+    },
+    {
+        "category": "Appetizers & Sides",
+        "dish": "Fried Tofu",
+        "price": 3.99,
+        "description": "Deep-fried lightly until crispy and golden brown.",
+        "image": "Fried-tofu.jpg"
+    },
+    {
+        "category": "Appetizers & Sides",
+        "dish": "Kung Sarong",
+        "price": 6.99,
+        "description": "A Thai dish containing deep-fried prawns wrapped in crispy noodles.",
+        "image": "sarong-shrimp.jpg"
+    },
+    {
+        "category": "Appetizers & Sides",
+        "dish": "Kung with Blanket",
+        "price": 6.99,
+        "description": "A Hong Kong-style side dish with deep-fried prawns wrapped in a crispy blanket.",
+        "image": "kung-banket.jpg"
+    },
+    {
+        "category": "Appetizers & Sides",
+        "dish": "Peanut Sauce (Large)",
+        "price": 4.0,
+        "description": null,
+        "image": "default.jpg"
+    },
+    {
+        "category": "Appetizers & Sides",
+        "dish": "Peanut Sauce (Small)",
+        "price": 2.0,
+        "description": null,
+        "image": "default.jpg"
+    },
+    {
+        "category": "Appetizers & Sides",
+        "dish": "Pork Stick (Moo Saiy Mai)",
+        "price": 6.99,
+        "description": null,
+        "image": "pork-stick.jpg"
+    },
+    {
+        "category": "Appetizers & Sides",
+        "dish": "Potstickers (Dumpling)",
+        "price": 3.99,
+        "description": "Steamed and then pan-fried dumplings filled with ground pork and cabbage. Crispy bottoms and flavorful, served with sweet soy sauce.",
+        "image": "pot-sticker.jpg"
+    },
+    {
+        "category": "Appetizers & Sides",
+        "dish": "Sab Sampler",
+        "price": 12.99,
+        "description": "Started your meal with an assortment appetizer including 2 of each Chicken Satay, Cream Cheese Wonton, Egg roll, Spring roll, Chicken wing, Potsticker. Comes with 3 sauces: peanut sauce, plum sauce, and sweet soy sauce.",
+        "image": "sab-sampler.jpg"
+    },
+    {
+        "category": "Appetizers & Sides",
+        "dish": "Steamed Chicken, Pork, Beef",
+        "price": 5.0,
+        "description": null,
+        "image": "default.jpg"
+    },
+    {
+        "category": "Appetizers & Sides",
+        "dish": "Steamed Noodle (Large)",
+        "price": 5.0,
+        "description": null,
+        "image": "default.jpg"
+    },
+    {
+        "category": "Appetizers & Sides",
+        "dish": "Steamed Noodle (Small)",
+        "price": 3.0,
+        "description": null,
+        "image": "default.jpg"
+    },
+    {
+        "category": "Appetizers & Sides",
+        "dish": "Steamed Vegetables (Large)",
+        "price": 5.0,
+        "description": null,
+        "image": "default.jpg"
+    },
+    {
+        "category": "Appetizers & Sides",
+        "dish": "Steamed Vegetables (Small)",
+        "price": 3.0,
+        "description": null,
+        "image": "default.jpg"
+    },
+    {
+        "category": "Appetizers & Sides",
+        "dish": "Steamed White Rice (Large)",
+        "price": 4.0,
+        "description": null,
+        "image": "default.jpg"
+    },
+    {
+        "category": "Appetizers & Sides",
+        "dish": "Steamed White Rice (Small)",
+        "price": 2.0,
+        "description": null,
+        "image": "default.jpg"
+    },
+    {
+        "category": "Appetizers & Sides",
+        "dish": "Vegetarian Egg Rolls",
+        "price": 5.99,
+        "description": null,
+        "image": "default.jpg"
+    },
+    {
+        "category": "Desserts & Others",
+        "dish": "Combination Desserts",
+        "price": 7.0,
+        "description": null,
+        "image": "default.jpg"
+    },
+    {
+        "category": "Desserts & Others",
+        "dish": "Dessert of the Day",
+        "price": 6.0,
+        "description": null,
+        "image": "default.jpg"
+    },
+    {
+        "category": "Desserts & Others",
+        "dish": "Fried Banana with Ice Cream",
+        "price": 6.0,
+        "description": "Deep-fried bananas served with ice cream.",
+        "image": "default.jpg"
+    },
+    {
+        "category": "Desserts & Others",
+        "dish": "Sweet Rice w/ Ice Cream and Palm Seeds",
+        "price": 6.0,
+        "description": "Sticky rice served with ice cream and palm seeds.",
+        "image": "default.jpg"
+    },
+    {
+        "category": "Desserts & Others",
+        "dish": "Sweet Rice with Mango",
+        "price": 6.0,
+        "description": "Traditional Thai sticky rice with fresh mango (seasonal).",
+        "image": "default.jpg"
+    },
+    {
+        "category": "Desserts & Others",
+        "dish": "Woon KraDhi (Coconut Milk Agar Jelly)",
+        "price": 6.0,
+        "description": null,
+        "image": "default.jpg"
+    },
+    {
+        "category": "Entr\u00e9es & Curries",
+        "dish": "Broccoli Stir-Fry",
+        "price": 11.99,
+        "description": null,
+        "image": "broccoli.jpg"
+    },
+    {
+        "category": "Entr\u00e9es & Curries",
+        "dish": "Cashew Nut Stir-Fry",
+        "price": 11.99,
+        "description": null,
+        "image": "cashewnut.jpg"
+    },
+    {
+        "category": "Entr\u00e9es & Curries",
+        "dish": "Garlic and Pepper Stir-Fry",
+        "price": 11.99,
+        "description": null,
+        "image": "default.jpg"
+    },
+    {
+        "category": "Entr\u00e9es & Curries",
+        "dish": "Green Curry",
+        "price": 11.99,
+        "description": "A milder Thai curry made with green curry paste, Thai eggplant, bamboo shoots, bell peppers, potatoes, carrots, and basil.",
+        "image": "green-curry.jpg"
+    },
+    {
+        "category": "Entr\u00e9es & Curries",
+        "dish": "Massaman Curry",
+        "price": 11.99,
+        "description": null,
+        "image": "default.jpg"
+    },
+    {
+        "category": "Entr\u00e9es & Curries",
+        "dish": "Pad Kra Paow",
+        "price": 11.99,
+        "description": "Stir-fried onions, bell peppers, jalape\u00f1os, carrots, mushrooms, and basil in krapaow sauce.",
+        "image": "pad-ka-pow.jpg"
+    },
+    {
+        "category": "Entr\u00e9es & Curries",
+        "dish": "Pad Pick (Spicy Garlic Sauce)",
+        "price": 11.99,
+        "description": null,
+        "image": "default.jpg"
+    },
+    {
+        "category": "Entr\u00e9es & Curries",
+        "dish": "Panaeng Curry",
+        "price": 11.99,
+        "description": null,
+        "image": "panang.jpg"
+    },
+    {
+        "category": "Entr\u00e9es & Curries",
+        "dish": "Pra Ram (Peanut Sauce)",
+        "price": 11.99,
+        "description": null,
+        "image": "pra-ram.jpg"
+    },
+    {
+        "category": "Entr\u00e9es & Curries",
+        "dish": "Red Curry",
+        "price": 11.99,
+        "description": "A spicy, sweet, and rich Thai curry with red curry paste cooked in coconut milk, Thai eggplant, bamboo shoots, bell peppers, potatoes, carrots, and basil.",
+        "image": "default.jpg"
+    },
+    {
+        "category": "Entr\u00e9es & Curries",
+        "dish": "Sweet & Sour Stir-Fry",
+        "price": 11.99,
+        "description": null,
+        "image": "sweetandsour.jpg"
+    },
+    {
+        "category": "Entr\u00e9es & Curries",
+        "dish": "Vegetable Delight",
+        "price": 11.99,
+        "description": null,
+        "image": "default.jpg"
+    },
+    {
+        "category": "Entr\u00e9es & Curries",
+        "dish": "Yellow Curry",
+        "price": 11.99,
+        "description": "A mild curry with yellow curry powder, onion, bell peppers, potatoes, and carrots.",
+        "image": "yellow-curry.jpg"
+    },
+    {
+        "category": "Entr\u00e9es & Curries",
+        "dish": "Young Ginger Stir-Fry",
+        "price": 11.99,
+        "description": null,
+        "image": "default.jpg"
+    },
+    {
+        "category": "Noodle & Rice Dishes",
+        "dish": "Bacon Fried Rice",
+        "price": 13.99,
+        "description": null,
+        "image": "default.jpg"
+    },
+    {
+        "category": "Noodle & Rice Dishes",
+        "dish": "Chow Mein Noodle",
+        "price": 12.99,
+        "description": null,
+        "image": "chow-mean.jpg"
+    },
+    {
+        "category": "Noodle & Rice Dishes",
+        "dish": "Crispy Noodle (Mee Kob)",
+        "price": 12.99,
+        "description": null,
+        "image": "me-kob.jpg"
+    },
+    {
+        "category": "Noodle & Rice Dishes",
+        "dish": "Curry Noodle with Grilled Chicken",
+        "price": 13.99,
+        "description": null,
+        "image": "default.jpg"
+    },
+    {
+        "category": "Noodle & Rice Dishes",
+        "dish": "Dry Noodle Roasted Red Pork",
+        "price": 12.99,
+        "description": null,
+        "image": "default.jpg"
+    },
+    {
+        "category": "Noodle & Rice Dishes",
+        "dish": "Khaow Na Moo",
+        "price": 13.99,
+        "description": null,
+        "image": "default.jpg"
+    },
+    {
+        "category": "Noodle & Rice Dishes",
+        "dish": "Khaow Pad Moo Deang",
+        "price": 13.99,
+        "description": null,
+        "image": "default.jpg"
+    },
+    {
+        "category": "Noodle & Rice Dishes",
+        "dish": "Khaow Ra Vin Yarn",
+        "price": 13.99,
+        "description": null,
+        "image": "default.jpg"
+    },
+    {
+        "category": "Noodle & Rice Dishes",
+        "dish": "Khow Mun Kai",
+        "price": 13.99,
+        "description": null,
+        "image": "default.jpg"
+    },
+    {
+        "category": "Noodle & Rice Dishes",
+        "dish": "Khow Mun Moo",
+        "price": 13.99,
+        "description": null,
+        "image": "default.jpg"
+    },
+    {
+        "category": "Noodle & Rice Dishes",
+        "dish": "Kua Noodle",
+        "price": 12.99,
+        "description": null,
+        "image": "kua-noodle.jpg"
+    },
+    {
+        "category": "Noodle & Rice Dishes",
+        "dish": "Lard Na",
+        "price": 12.99,
+        "description": null,
+        "image": "lad-na.jpg"
+    },
+    {
+        "category": "Noodle & Rice Dishes",
+        "dish": "Pad Ke Mow (Drunken Noodles)",
+        "price": 12.99,
+        "description": null,
+        "image": "pad-ke-mow.jpg"
+    },
+    {
+        "category": "Noodle & Rice Dishes",
+        "dish": "Pad Mee (Mama Noodle)",
+        "price": 12.99,
+        "description": null,
+        "image": "default.jpg"
+    },
+    {
+        "category": "Noodle & Rice Dishes",
+        "dish": "Pad See Iw",
+        "price": 12.99,
+        "description": null,
+        "image": "default.jpg"
+    },
+    {
+        "category": "Noodle & Rice Dishes",
+        "dish": "Pad Thai",
+        "price": 11.99,
+        "description": null,
+        "image": "pad-thai-beef.jpg"
+    },
+    {
+        "category": "Noodle & Rice Dishes",
+        "dish": "Pad Udon (Udon Noodle)",
+        "price": 12.99,
+        "description": null,
+        "image": "default.jpg"
+    },
+    {
+        "category": "Noodle & Rice Dishes",
+        "dish": "Pad Woon Sen (Stir-Fried Glass Noodle)",
+        "price": 12.99,
+        "description": null,
+        "image": "pad-won-sen.jpg"
+    },
+    {
+        "category": "Noodle & Rice Dishes",
+        "dish": "Pineapple Fried Rice",
+        "price": 11.99,
+        "description": "Jasmine rice stir-fried with egg, pineapple, onions, peas, carrots, cashew nuts, and curry powder in house soy sauce.",
+        "image": "fried-rice.jpg"
+    },
+    {
+        "category": "Noodle & Rice Dishes",
+        "dish": "Sab Fried Rice",
+        "price": 11.99,
+        "description": "Jasmine rice stir-fried with egg, onions, scallions, peas, and carrots in house soy sauce.",
+        "image": "sab-fried-rice.jpg"
+    },
+    {
+        "category": "Noodle & Rice Dishes",
+        "dish": "Sab Fried Rice Nam Khao",
+        "price": 12.99,
+        "description": null,
+        "image": "nam-khao.jpg"
+    },
+    {
+        "category": "Noodle & Rice Dishes",
+        "dish": "Spicy Fried Rice",
+        "price": 11.99,
+        "description": "Jasmine rice stir-fried with bell peppers, fresh basil, broccoli, and carrots in garlic and chili sauce.",
+        "image": "spicy-fried-rice.jpg"
+    },
+    {
+        "category": "Soups & Salads",
+        "dish": "Egg Drop Soup",
+        "price": 4.99,
+        "description": "A silky Chinese soup featuring strands of eggs in chicken broth, with green onion for flavor.",
+        "image": "egg-soup.jpg"
+    },
+    {
+        "category": "Soups & Salads",
+        "dish": "Khaow Piek (Homemade Noodle)",
+        "price": 12.99,
+        "description": "A popular Lao noodle soup with freshly hand-cut rice tapioca noodles in a fragrant ginger broth, garnished with green onions, cilantro, and fried garlic.",
+        "image": "khow-piek.jpg"
+    },
+    {
+        "category": "Soups & Salads",
+        "dish": "Laab (Chicken, Pork, Beef)",
+        "price": 12.99,
+        "description": null,
+        "image": "chicken-larb.jpg"
+    },
+    {
+        "category": "Soups & Salads",
+        "dish": "Laab Beef (Lao Style with Sticky Rice)",
+        "price": 15.99,
+        "description": "A special dish for ceremonies and parties. Made with rare lean ground beef soaked in special laab sauce, then finished with fresh herbs.",
+        "image": "larb-beef.jpg"
+    },
+    {
+        "category": "Soups & Salads",
+        "dish": "Lao Style Papaya Salad",
+        "price": 10.99,
+        "description": "A spicy Lao papaya salad known as Tum Mak Hoong, made with shredded green papaya, tomatoes, chilies, garlic, lime, and Laotian seasoning.",
+        "image": "papaya.jpg"
+    },
+    {
+        "category": "Soups & Salads",
+        "dish": "Pho (Vietnamese Noodle Soup)",
+        "price": 11.99,
+        "description": null,
+        "image": "pho.jpg"
+    },
+    {
+        "category": "Soups & Salads",
+        "dish": "Sukiyaki (Glass Noodle Soup)",
+        "price": 12.99,
+        "description": "A bowl of glass noodles, mixed vegetables, and egg in a fragrant ginger broth seasoned with house sukiyaki sauce.",
+        "image": "sukiyaki.jpg"
+    },
+    {
+        "category": "Soups & Salads",
+        "dish": "Thai Style Papaya Salad",
+        "price": 10.99,
+        "description": "Crunchy strips of unripe green papaya with chilies, garlic, roasted peanuts, tomatoes, and spicy tamarind-lime dressing.",
+        "image": "default.jpg"
+    },
+    {
+        "category": "Soups & Salads",
+        "dish": "Tom Khar Combination Seafood Coconut Soup",
+        "price": 15.99,
+        "description": null,
+        "image": "tom-khar.jpg"
+    },
+    {
+        "category": "Soups & Salads",
+        "dish": "Tom Khar Gai (Chicken Coconut Soup)",
+        "price": 12.99,
+        "description": "A rich and creamy Thai chicken coconut soup with tangy, salty flavors from fresh lime juice, lemongrass, galangal, and makrut lime leaves.",
+        "image": "default.jpg"
+    },
+    {
+        "category": "Soups & Salads",
+        "dish": "Tom Khar Kung (Shrimp Coconut Soup)",
+        "price": 13.99,
+        "description": "A variation of Tom Kha Gai, substituting shrimp for chicken.",
+        "image": "default.jpg"
+    },
+    {
+        "category": "Soups & Salads",
+        "dish": "Tom Sab (Pork Rib Soup)",
+        "price": 13.99,
+        "description": "A brothy, spicy, and sour soup with boiled pork ribs, tomatoes, and aromatic herbs: lemongrass, galangal, and makrut lime leaves.",
+        "image": "default.jpg"
+    },
+    {
+        "category": "Soups & Salads",
+        "dish": "Tom Yum Chicken",
+        "price": 12.99,
+        "description": "A brothy, spicy, and sour soup with chicken, mushrooms, and tomatoes, infused with lemongrass, galangal, and makrut lime leaves.",
+        "image": "default.jpg"
+    },
+    {
+        "category": "Soups & Salads",
+        "dish": "Tom Yum Combination Seafood Soup",
+        "price": 15.99,
+        "description": null,
+        "image": "tom-yum.jpg"
+    },
+    {
+        "category": "Soups & Salads",
+        "dish": "Tom Yum Kung (Shrimp Soup)",
+        "price": 13.99,
+        "description": "A variation of Tom Yum Chicken, substituting shrimp for chicken.",
+        "image": "default.jpg"
+    },
+    {
+        "category": "Soups & Salads",
+        "dish": "Tum Mour Lao Style",
+        "price": 15.99,
+        "description": null,
+        "image": "default.jpg"
+    },
+    {
+        "category": "Soups & Salads",
+        "dish": "Wonton & Noodle Soup",
+        "price": 12.99,
+        "description": null,
+        "image": "wonton-soup.jpg"
+    },
+    {
+        "category": "Soups & Salads",
+        "dish": "Wonton Soup",
+        "price": 11.99,
+        "description": "A Chinese classic with pork-filled dumplings in seasoned chicken broth, with bok choy, green onion, and cilantro.",
+        "image": "default.jpg"
+    },
+    {
+        "category": "Soups & Salads",
+        "dish": "Yum Kai (Chicken)/Nuea (Beef)",
+        "price": 12.99,
+        "description": null,
+        "image": "default.jpg"
+    },
+    {
+        "category": "Soups & Salads",
+        "dish": "Yum Talay (Seafood Salad)",
+        "price": 15.99,
+        "description": null,
+        "image": "default.jpg"
+    },
+    {
+        "category": "Soups & Salads",
+        "dish": "Yum Won Sen (Glass Noodles)",
+        "price": 12.99,
+        "description": null,
+        "image": "default.jpg"
+    },
+    {
+        "category": "Specials",
+        "dish": "Bang Bang Chicken",
+        "price": 12.99,
+        "description": null,
+        "image": "default.jpg"
+    },
+    {
+        "category": "Specials",
+        "dish": "Beef/Pork Jerky",
+        "price": 10.99,
+        "description": null,
+        "image": "default.jpg"
+    },
+    {
+        "category": "Specials",
+        "dish": "Chicken Teriyaki",
+        "price": 12.99,
+        "description": "Grilled chicken marinated in a seasoned soy sauce glaze, served with steamed rice.",
+        "image": "chicken-teriyaki.jpg"
+    },
+    {
+        "category": "Specials",
+        "dish": "Choo Chee Fish",
+        "price": 14.99,
+        "description": "Deep-fried tilapia fish in a flavorful Choo Chee curry, balancing sweet, sour, and spicy flavors.",
+        "image": "choochee.jpg"
+    },
+    {
+        "category": "Specials",
+        "dish": "Lao Sausage with Sticky Rice",
+        "price": 12.99,
+        "description": null,
+        "image": "default.jpg"
+    },
+    {
+        "category": "Specials",
+        "dish": "Moo Yang (BBQ Pork)",
+        "price": 13.99,
+        "description": null,
+        "image": "default.jpg"
+    },
+    {
+        "category": "Specials",
+        "dish": "Naem Neuang",
+        "price": 25.0,
+        "description": null,
+        "image": "default.jpg"
+    },
+    {
+        "category": "Specials",
+        "dish": "Orange Chicken",
+        "price": 12.99,
+        "description": "An American-Chinese dish of fried chicken glazed with sweet orange-flavored chili sauce.",
+        "image": "orange.chicken.jpg"
+    },
+    {
+        "category": "Specials",
+        "dish": "Pork Rib",
+        "price": 10.99,
+        "description": null,
+        "image": "default.jpg"
+    },
+    {
+        "category": "Specials",
+        "dish": "Pra Sam Rod (Fried Fish with 3 Flavored Sauce)",
+        "price": 14.99,
+        "description": null,
+        "image": "pra-sam-rod.jpg"
+    },
+    {
+        "category": "Specials",
+        "dish": "Sab Thai Basket",
+        "price": 13.99,
+        "description": null,
+        "image": "default.jpg"
+    }
+]

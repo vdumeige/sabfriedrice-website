@@ -1,0 +1,15 @@
+// 
+// user.scss
+// Use this to write your custom SCSS
+//
+
+.card-img-top {
+    aspect-ratio: 4/3;
+    object-fit: cover;
+  }
+
+  .navbar .nav-link {
+    font-size: 1.3rem !important;
+    font-weight: 800 !important;
+    padding: 0.5rem 1rem !important;
+  }

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{> partials/head title="Touché - Café & Restaurant Template"}}
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    {{> partials/navbar variant="dark" toggle="true" page="about-us.html"}}
+
+    <!-- HEADER -->
+    <header data-jarallax data-speed=".8" style="background-image: url(assets/img/about-us-background.jpg)">
+      <div class="pt-10 pb-8 pt-md-15 pb-md-13 bg-black bg-opacity-50">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6 text-center">
+              <!-- Heading -->
+              <h1 class="display-6 fw-bold text-white">About Us</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- DISCOVER -->
+    <section class="py-7 py-md-9">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2">
+            <!-- Divider -->
+            <hr class="hr-sm text-primary" />
+
+            <!-- Text -->
+            <p class="fs-lg lh-lg text-body-emphasis mb-5 mb-md-0">We love what we do.</p>
+          </div>
+          <div class="col-md-4">
+            <!-- Media -->
+            <div class="media-decoration media-decoration-1 mb-5 mb-md-0">
+              <!-- Border -->
+              <div class="media-decoration-border" data-jarallax-element="-40"></div>
+
+              <!-- Image -->
+              <img class="media-decoration-img img-fluid" src="assets/img/about-us-sub.jpg" alt="..." />
+            </div>
+          </div>
+          <div class="col-md-5 align-self-center mx-auto">
+            <!-- Heading -->
+            <h2 class="mb-2"><em>Always</em> an amazing experience</h2>
+
+            <!-- Text -->
+            <p class="mb-0">
+              At Sab Fried Rice, we're passionate about bringing authentic Thai flavors to Fort Smith, Arkansas. Our family-owned restaurant combines traditional recipes passed down through generations with locally sourced ingredients to create memorable dining experiences. Since opening our doors, we've been dedicated to sharing the vibrant tastes of Thailand while providing warm hospitality that makes every guest feel like family.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUOTE -->
+    <section class="py-7 py-md-9 bg-light">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 col-lg-6 text-center">
+            <!-- Heading -->
+            <h2 class="mb-4">What Our Guests Say</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 text-center">
+            <!-- Icon -->
+            <span class="display-1 font-serif text-primary">"</span>
+
+            <!-- Blockquote -->
+            <figure class="mb-0">
+              <blockquote class="blockquote mb-0">
+                <p class="font-serif text-body-emphasis mb-6">
+                  Fresh ingredients well prepared and presented. They don't cut any corners and the food is fantastic. 
+                  I've paid much more for mediocre food in upscale restaurants. The curry and noodles have a variety of fresh vegetables and great flavor. The spring rolls are the freshest I've ever had.
+                </p>
+              </blockquote>
+              <figcaption class="blockquote-footer text-xs mb-0">Kirby via Yelp</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFO -->
+    <section class="py-7 py-md-9">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 col-lg-6 text-center">
+            <!-- Heading -->
+            <h2 class="mb-2">Behind the scenes</h2>
+
+            <!-- Subheading -->
+            <p class="mb-6">
+              Every dish at Sab Fried Rice tells a story of tradition, passion, and the journey that brought authentic Thai cuisine to the heart of Fort Smith.
+            </p>
+          </div>
+        </div>
+        <div class="row align-items-center justify-content-between">
+          <div class="col-md-6 order-md-2">
+            <!-- Image -->
+            <img class="img-fluid mw-md-120 clip-top-start" src="assets/img/inside-restaurant.jpg" alt="..." />
+          </div>
+          <div class="col-md-5 order-md-1">
+            <!-- Text -->
+            <p class="lead text-body-emphasis">
+              From humble beginnings in a small kitchen in Bangkok to becoming Fort Smith's beloved Thai destination, our culinary journey spans generations and continents.
+            </p>
+
+            <!-- Text -->
+            <p class="mb-6">
+              Our kitchen is where magic happens daily. Each morning begins with the preparation of fresh ingredients and handcrafted sauces that form the foundation of our menu. Our chefs, trained in traditional Thai cooking methods, carefully balance the four fundamental Thai flavors – sweet, sour, salty, and spicy – to create dishes that transport you straight to the streets of Thailand. 
+              We're committed to preserving authenticity while embracing the local Arkansas community that has welcomed us with open arms.
+            </p>
+
+            <!-- Text -->
+            <p class="mb-md-0">
+              <a class="btn btn-outline-primary" href="contact-us.html"> Contact Us </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAP -->
+    <section class="bg-light" data-map='{"center": [-94.41029252410841, 35.37874523650219], "zoom": 15}' style="height: 30rem"></section>
+
+    <!-- FOOTER -->
+    {{> partials/footer}}
+
+    <!-- TOAST -->
+    {{> partials/toast}}
+
+    <!-- JAVASCRIPT -->
+    {{> partials/scripts}}
+  </body>
+</html>

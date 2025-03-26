@@ -1,0 +1,57 @@
+<nav class="navbar navbar-{{variant}} navbar-expand-lg {{#is toggle 'true'}}navbar-togglable{{/is}} fixed-top">
+  <div class="container">
+    <!-- Navbar brand (mobile) -->
+    <a class="navbar-brand d-lg-none" href="{{webRoot}}/index.html">
+      <img src="assets/img/Sab2-png.png" alt="Sab Fried Rice Logo" style="max-height: 40px;">
+    </a>
+
+    <!-- Navbar toggler -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarCollapse"
+      aria-controls="navbarCollapse"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar collapse -->
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <!-- Left navbar nav -->
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link {{#is page 'about-us.html'}}active{{/is}}" href="{{webRoot}}/about-us.html" style="font-size: 1.3rem; font-weight: 500; padding: 0.5rem 1rem;">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{#is page 'menu.html'}}active{{/is}}" href="{{webRoot}}/menu.html" style="font-size: 1.3rem; font-weight: 500; padding: 0.5rem 1rem;">Menu</a>
+        </li>
+      </ul>
+
+      <!-- Navbar brand (centered) -->
+      <a class="navbar-brand d-none d-lg-block mx-lg-0 position-absolute start-50 translate-middle-x" href="{{webRoot}}/index.html" style="top: 50%;">
+        <img src="assets/img/Sab2-png.png" alt="Sab Fried Rice Logo" style="max-height: 40px; margin-top: -47px;">
+      </a>
+      
+      <!-- Right navbar nav -->
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link {{#is page 'gallery.html'}}active{{/is}}" href="{{webRoot}}/gallery.html" style="font-size: 1.3rem; font-weight: 500; padding: 0.5rem 1rem;">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{#is page 'contact-us.html'}}active{{/is}}" href="{{webRoot}}/contact-us.html" style="font-size: 1.3rem; font-weight: 500; padding: 0.5rem 1rem;">Contact</a>
+        </li>
+        
+        <!-- Color mode -->
+        <li class="nav-item">
+          <div class="form-check form-switch form-switch-color-mode ms-2 mt-2">
+            <input class="form-check-input" type="checkbox" role="switch" id="colorModeSwitch" />
+            <label class="form-check-label" for="colodeModeSwitch"></label>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{> partials/head title="Touché - Café & Restaurant Template"}}
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    {{> partials/navbar variant="dark" toggle="true" page="menu.html"}}
+
+    <!-- HEADER -->
+    <header data-jarallax data-speed=".8" style="background-image: url('/img/menu-background.jpg')">  
+      <div class="pt-10 pb-8 pt-md-15 pb-md-13 bg-black bg-opacity-50">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6 text-center">
+              <h1 class="display-6 fw-bold text-white">Our menu</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MENU -->
+    <section class="py-7 py-md-9 border-bottom">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 col-lg-6 text-center">
+            <h2 class="mb-2">Explore Our Menu</h2>
+            <p class="mb-6">
+              Explore our diverse menu offerings, carefully crafted with authentic ingredients and traditional cooking techniques. Each dish reflects our commitment to quality and flavor, bringing you a truly exceptional dining experience.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <!-- Navigation -->
+            <div class="nav justify-content-center mb-6" id="menuTabs" role="tablist">
+              <a class="nav-link active" id="appetizersTab" data-bs-toggle="tab" href="#appetizers" role="tab" aria-controls="appetizers" aria-selected="true"> Appetizers & Sides </a>
+              <a class="nav-link" id="dessertsTab" data-bs-toggle="tab" href="#desserts" role="tab" aria-controls="desserts"> Desserts & Others </a>
+              <a class="nav-link" id="entreesTab" data-bs-toggle="tab" href="#entrees" role="tab" aria-controls="entrees"> Entrées & Curries </a>
+              <a class="nav-link" id="noodlesTab" data-bs-toggle="tab" href="#noodles" role="tab" aria-controls="noodles"> Noodle & Rice Dishes </a>
+              <a class="nav-link" id="soupsTab" data-bs-toggle="tab" href="#soups" role="tab" aria-controls="soups"> Soups & Salads </a>
+              <a class="nav-link" id="specialsTab" data-bs-toggle="tab" href="#specials" role="tab" aria-controls="specials"> Specials </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="tab-content" id="menuContent">
+
+              <!-- Appetizers & Sides -->
+              <div class="tab-pane fade show active" id="appetizers" role="tabpanel" aria-labelledby="appetizersTab">
+                <div class="row">
+                  {{#each menu}}
+                    {{#if (eq category "Appetizers & Sides")}}
+                      {{> partials/menu-item }}
+                    {{/if}}
+                  {{/each}}
+                </div>
+              </div>
+
+              <!-- Desserts & Others -->
+              <div class="tab-pane fade" id="desserts" role="tabpanel" aria-labelledby="dessertsTab">
+                <div class="row">
+                  {{#each menu}}
+                    {{#if (eq category "Desserts & Others")}}
+                      {{> partials/menu-item }}
+                    {{/if}}
+                  {{/each}}
+                </div>
+              </div>
+
+              <!-- Entrées & Curries -->
+              <div class="tab-pane fade" id="entrees" role="tabpanel" aria-labelledby="entreesTab">
+                <div class="row">
+                  {{#each menu}}
+                    {{#if (eq category "Entrées & Curries")}}
+                      {{> partials/menu-item }}
+                    {{/if}}
+                  {{/each}}
+                </div>
+              </div>
+
+              <!-- Noodle & Rice Dishes -->
+              <div class="tab-pane fade" id="noodles" role="tabpanel" aria-labelledby="noodlesTab">
+                <div class="row">
+                  {{#each menu}}
+                    {{#if (eq category "Noodle & Rice Dishes")}}
+                      {{> partials/menu-item }}
+                    {{/if}}
+                  {{/each}}
+                </div>
+              </div>
+
+              <!-- Soups & Salads -->
+              <div class="tab-pane fade" id="soups" role="tabpanel" aria-labelledby="soupsTab">
+                <div class="row">
+                  {{#each menu}}
+                    {{#if (eq category "Soups & Salads")}}
+                      {{> partials/menu-item }}
+                    {{/if}}
+                  {{/each}}
+                </div>
+              </div>
+
+              <!-- Specials -->
+              <div class="tab-pane fade" id="specials" role="tabpanel" aria-labelledby="specialsTab">
+                <div class="row">
+                  {{#each menu}}
+                    {{#if (eq category "Specials")}}
+                      {{> partials/menu-item }}
+                    {{/if}}
+                  {{/each}}
+                </div>
+              </div>
+           
+    
+    <!-- DISHES -->
+    <section class="py-7 py-md-9 overflow-hidden">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 col-lg-6 text-center">
+            <!-- Heading -->
+            <h2 class="mb-2">Our <em>featured</em> dishes</h2>
+
+            <!-- Subheading -->
+            <p class="mb-6">
+              Savor the Flavors of Thailand, Crafted in the Heart of Fort Smith.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <!-- Slider -->
+            <div class="flickity-viewport-visible" data-flickity='{"cellAlign": "left", "contain": true, "imagesLoaded": true, "pageDots": false}'>
+              <div class="w-100 px-2" style="max-width: 320px">
+                <!-- Card -->
+                <div class="card border-0">
+                  <!-- Image -->
+                  <img class="card-img-top" src="assets/img/green-curry.jpg" alt="..." />
+
+                  <!-- Body -->
+                  <div class="card-body">
+                    <!-- Heading -->
+                    <div class="row mb-2">
+                      <div class="col">
+                        <h5 class="mb-0">Green Curry</h5>
+                      </div>
+                      <div class="col-auto">
+                        <span class="fs-4 font-serif text-body-emphasis">$11.99</span>
+                      </div>
+                    </div>
+
+                    <!-- Text -->
+                    <p class="mb-0">A vibrant symphony of tender vegetables and aromatic herbs, simmered in a rich, creamy green curry sauce that balances spice, sweetness, and the fresh essence of Thailand.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="w-100 px-2" style="max-width: 320px">
+                <!-- Card -->
+                <div class="card border-0">
+                  <!-- Image -->
+                  <img class="card-img-top" src="assets/img/sab-sampler.jpg" alt="..." />
+
+                  <!-- Body -->
+                  <div class="card-body">
+                    <!-- Heading -->
+                    <div class="row mb-2">
+                      <div class="col">
+                        <h5 class="mb-0">Sab Sampler</h5>
+                      </div>
+                      <div class="col-auto">
+                        <span class="fs-4 font-serif text-body-emphasis">$12.99</span>
+                      </div>
+                    </div>
+
+                    <!-- Text -->
+                    <p class="mb-0">A vibrant culinary journey showcasing the rich tapestry of Thai flavors – crisp, golden delights and delicate morsels artfully arranged, accompanied by an array of signature dipping sauces that dance between sweet, tangy, and bold.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="w-100 px-2" style="max-width: 320px">
+                <!-- Card -->
+                <div class="card border-0">
+                  <!-- Image -->
+                  <img class="card-img-top" src="assets/img/chicken-larb.jpg" alt="..." />
+
+                  <!-- Body -->
+                  <div class="card-body">
+                    <!-- Heading -->
+                    <div class="row mb-2">
+                      <div class="col">
+                        <h5 class="mb-0">Chicken Larb</h5>
+                      </div>
+                      <div class="col-auto">
+                        <span class="fs-4 font-serif text-body-emphasis">$12.99</span>
+                      </div>
+                    </div>
+
+                    <!-- Text -->
+                    <p class="mb-0">Chicken Larb - A vibrant minced chicken salad infused with fresh Thai herbs, lemongrass, and mint leaves, enhanced with a hint of chili and zesty lime dressing. Served with crisp cucumber slices for a refreshing crunch. This iconic northeastern Thai dish delivers a perfect balance of bright flavors and light, satisfying texture.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="w-100 px-2" style="max-width: 320px">
+                <!-- Card -->
+                <div class="card border-0">
+                  <!-- Image -->
+                  <img class="card-img-top" src="assets/img/tom-yum.jpg" alt="..." />
+
+                  <!-- Body -->
+                  <div class="card-body">
+                    <!-- Heading -->
+                    <div class="row mb-2">
+                      <div class="col">
+                        <h5 class="mb-0">Tom Yum Combination Seafood Soup</h5>
+                      </div>
+                      <div class="col-auto">
+                        <span class="fs-4 font-serif text-body-emphasis">$15.99</span>
+                      </div>
+                    </div>
+
+                    <!-- Text -->
+                    <p class="mb-0">A steaming hot pot of Thailand's famous fragrant soup, brimming with succulent shrimp, tender squid, and delicate fish, all swimming in a lemongrass-infused broth. The perfect balance of sour, spicy, and aromatic flavors comes from fresh lime juice, galangal, and kaffir lime leaves, while mushrooms and fresh herbs add depth and complexity. Served in a traditional hot pot to maintain its temperature and allow the flavors to continue developing as you enjoy this invigorating Thai classic.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="w-100 px-2" style="max-width: 320px">
+                <!-- Card -->
+                <div class="card border-0">
+                  <!-- Image -->
+                  <img class="card-img-top" src="assets/img/nam-khao.jpg" alt="..." />  
+
+                  <!-- Body -->
+                  <div class="card-body">
+                    <!-- Heading -->
+                    <div class="row mb-2">
+                      <div class="col">
+                        <h5 class="mb-0">Nam Khao </h5>
+                      </div>
+                      <div class="col-auto">
+                        <span class="fs-4 font-serif text-body-emphasis">$12.99</span>
+                      </div>
+                    </div>
+
+                    <!-- Text -->
+                    <p class="mb-0">Crispy fried rice tossed with savory pork, fresh herbs, and aromatic spices, creating a perfect balance of textures and flavors. Brightened with lime juice and garnished with mint leaves and dried chilies, this northern Thai specialty is served with fresh lettuce leaves for wrapping, offering a delightful contrast of warm, crunchy filling and cool, crisp greens.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="w-100 px-2" style="max-width: 320px">
+                <!-- Card -->
+                <div class="card border-0">
+                  <!-- Image -->
+                  <img class="card-img-top" src="assets/img/yum-kai.jpg" alt="..." />  
+
+                  <!-- Body -->
+                  <div class="card-body">
+                    <!-- Heading -->
+                    <div class="row mb-2">
+                      <div class="col">
+                        <h5 class="mb-0">Yum Kai</h5>
+                      </div>
+                      <div class="col-auto">
+                        <span class="fs-4 font-serif text-body-emphasis">$12.99</span>
+                      </div>
+                    </div>
+
+                    <!-- Text -->
+                    <p class="mb-0">Succulent grilled chicken tossed with crisp vegetables, fresh herbs, and sliced onions in a vibrant Thai-style dressing. The perfect balance of sweet, sour, and spicy flavors comes from lime juice, fish sauce, and chili, while fresh cilantro adds an aromatic finish. Served with colorful purple cabbage and carrots for added crunch and visual appeal, this refreshing salad delivers the authentic taste of Thailand in every bite.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESERVATION -->
+    <section class="py-7 py-md-9 bg-light">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 col-lg-6 text-center">
+            <!-- Heading -->
+            <h2 class="mb-2">Make online reservation</h2>
+
+            <!-- Subheading -->
+            <p class="mb-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam illo praesentium sequi in cum, beatae maiores quae qui.</p>
+          </div>
+        </div>
+        <div class="row justify-content-lg-center">
+          <div class="col-lg-8">
+            <!-- Form -->
+            <form>
+              <div class="row gx-3">
+                <div class="col-md-6">
+                  <!-- Contact number (hidden) -->
+                  <input type="hidden" name="contact_number" />
+
+                  <!-- Full name -->
+                  <div class="mb-3">
+                    <label class="visually-hidden" for="user_name">Full name</label>
+                    <input class="form-control" id="user_name" name="user_name" type="text" placeholder="Full name" required />
+                  </div>
+
+                  <!-- Phone number -->
+                  <div class="mb-3">
+                    <label class="visually-hidden" for="user_phone">Phone number</label>
+                    <input class="form-control" id="user_phone" name="user_phone" type="tel" placeholder="Phone number" required />
+                  </div>
+
+                  <!-- Email address -->
+                  <div class="mb-3">
+                    <label class="visually-hidden" for="user_email">Email address</label>
+                    <input class="form-control" id="user_email" name="user_email" type="email" placeholder="Email address" required />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <!-- Guests -->
+                  <div class="mb-3">
+                    <label class="visually-hidden" for="guests">Guests</label>
+                    <select class="form-select" id="guests" name="guests" required>
+                      <option value="1">1 person</option>
+                      <option value="2" selected="">2 persons</option>
+                      <option value="3">3 persons</option>
+                      <option value="4">4 persons</option>
+                      <option value="5">5 persons</option>
+                    </select>
+                  </div>
+
+                  <!-- Date -->
+                  <div class="mb-3">
+                    <label class="visually-hidden" for="date">Date</label>
+                    <input class="form-control" id="date" name="date" type="date" value="2021-02-12" required />
+                  </div>
+
+                  <!-- Time -->
+                  <div class="mb-3">
+                    <label class="visually-hidden" for="time">Time</label>
+                    <input class="form-control" id="time" name="time" type="time" value="18:00" required />
+                  </div>
+                </div>
+                <div class="col text-center">
+                  <!-- Button -->
+                  <button class="btn btn-outline-primary" type="submit">Reserve a table</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    {{> partials/footer}}
+
+    <!-- TOAST -->
+    {{> partials/toast}}
+
+    <!-- JAVASCRIPT -->
+    {{> partials/scripts}}
+
+  </body>
+</html>
