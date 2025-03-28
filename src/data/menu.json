@@ -2,7 +2,7 @@
     {
         "category": "Appetizers & Sides",
         "dish": "1/2 Sab Thai Fried Rice Chicken",
-        "price": 5.0,
+        "price": 8.99,
         "description": null,
         "image": "default.jpg"
     },
@@ -51,7 +51,7 @@
     {
         "category": "Appetizers & Sides",
         "dish": "Fried Tofu",
-        "price": 3.99,
+        "price": 5.99,
         "description": "Deep-fried lightly until crispy and golden brown.",
         "image": "fried-tofu.jpg"
     },
@@ -93,7 +93,7 @@
     {
         "category": "Appetizers & Sides",
         "dish": "Potstickers (Dumpling)",
-        "price": 3.99,
+        "price": 5.99,
         "description": "Steamed and then pan-fried dumplings filled with ground pork and cabbage. Crispy bottoms and flavorful, served with sweet soy sauce.",
         "image": "pot-sticker.jpg"
     },
