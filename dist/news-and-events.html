@@ -4,6 +4,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNG7PJLT9T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-RNG7PJLT9T');
+    </script>
+    
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
@@ -46,6 +56,51 @@
           }
         });
       })();
+    </script>
+    
+    <!-- Structured data: opening hours (closed Tuesdays), address, contact -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Sab Fried Rice",
+        "servesCuisine": ["Thai", "Lao"],
+        "url": "https://www.sabfriedrice.com/",
+        "telephone": "+1-479-551-2009",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "2100 Rogers Ave",
+          "addressLocality": "Fort Smith",
+          "addressRegion": "AR",
+          "postalCode": "72901",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 35.37874523650219,
+          "longitude": -94.41029252410841
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "11:00",
+            "closes": "20:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Tuesday",
+            "opens": "00:00",
+            "closes": "00:00"
+          }
+        ],
+        "sameAs": [
+          "https://www.yelp.com/biz/sab-fried-rice-fort-smith",
+          "https://www.instagram.com/sabfriedricellc"
+        ],
+        "hasMenu": "https://www.sabfriedrice.com/menu.html"
+      }
     </script>
     
     <!-- Title -->
@@ -426,8 +481,11 @@
     
             <!-- Text -->
             <div class="mb-6">
-              <div class="text-xs">Monday - Sunday</div>
+              <div class="text-xs">Monday, Wednesday &ndash; Sunday</div>
               <div class="font-serif">11:00 AM - 08:00 PM</div>
+              <div class="text-xs text-primary mt-2">
+                <span class="fas fa-circle-info me-2"></span>Closed Tuesdays
+              </div>
             </div>
           </div>
         </div>
@@ -436,7 +494,7 @@
             <!-- Copyright -->
             <div class="d-flex align-items-center">
               <hr class="hr-sm me-3" style="height: 1px" />
-              &copy; 2025 Sab Fried Frice. All rights reserved.
+              &copy; 2026 Sab Fried Rice. All rights reserved.
             </div>
           </div>
         </div>

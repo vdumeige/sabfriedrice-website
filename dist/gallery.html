@@ -4,6 +4,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNG7PJLT9T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-RNG7PJLT9T');
+    </script>
+    
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
@@ -46,6 +56,51 @@
           }
         });
       })();
+    </script>
+    
+    <!-- Structured data: opening hours (closed Tuesdays), address, contact -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Sab Fried Rice",
+        "servesCuisine": ["Thai", "Lao"],
+        "url": "https://www.sabfriedrice.com/",
+        "telephone": "+1-479-551-2009",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "2100 Rogers Ave",
+          "addressLocality": "Fort Smith",
+          "addressRegion": "AR",
+          "postalCode": "72901",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 35.37874523650219,
+          "longitude": -94.41029252410841
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "11:00",
+            "closes": "20:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Tuesday",
+            "opens": "00:00",
+            "closes": "00:00"
+          }
+        ],
+        "sameAs": [
+          "https://www.yelp.com/biz/sab-fried-rice-fort-smith",
+          "https://www.instagram.com/sabfriedricellc"
+        ],
+        "hasMenu": "https://www.sabfriedrice.com/menu.html"
+      }
     </script>
     
     <!-- Title -->
@@ -111,7 +166,7 @@
       </div>
     </nav>
     <!-- HEADER -->
-    <header data-jarallax data-speed=".8" style="background-image: url(assets/img/23.jpg)">
+    <header style="background-image: url(assets/img/menu-background.webp); background-size: cover; background-position: center;">
       <div class="pt-10 pb-8 pt-md-15 pb-md-13 bg-black bg-opacity-50">
         <div class="container">
           <div class="row justify-content-center">
@@ -124,164 +179,67 @@
       </div>
     </header>
 
-    <!-- CAROUSEL -->
-    <section class="pt-7 pt-md-9">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-8 col-lg-6 text-center">
-            <!-- Heading -->
-            <h2 class="mb-2">Take a sneak peek</h2>
-
-            <!-- Subheading -->
-            <p class="mb-6">
-              Asperiores temporibus fuga possimus labore ex porro pariatur sed, nisi dolor, nobis architecto. Placeat facilis voluptas alias ducimus.
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <!-- Carousel -->
-            <div data-flickity='{"wrapAround": true, "imagesLoaded": true}'>
-              <figure class="w-100">
-                <!-- Image -->
-                <img class="img-fluid mb-4" src="assets/img/33.jpg" alt="..." />
-
-                <!-- Caption -->
-                <figcaption class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit 🥰</figcaption>
-              </figure>
-              <figure class="w-100">
-                <!-- Image -->
-                <img class="img-fluid mb-4" src="assets/img/35.jpg" alt="..." />
-
-                <!-- Caption -->
-                <figcaption class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit 🥰</figcaption>
-              </figure>
-              <figure class="w-100">
-                <!-- Image -->
-                <img class="img-fluid mb-4" src="assets/img/36.jpg" alt="..." />
-
-                <!-- Caption -->
-                <figcaption class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit 🥰</figcaption>
-              </figure>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    
 
     <!-- GALLERY -->
     <section class="py-7 py-md-9">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-12 col-md-8 col-lg-6 text-center">
-            <!-- Heading -->
-            <h2 class="mb-2">Our gallery</h2>
-
-            <!-- Subheading -->
-            <p class="mb-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          </div>
         </div>
         <div class="row gx-3" data-isotope>
           <div class="col-6 col-sm-6 col-md-4">
             <!-- Item -->
-            <a class="d-block mb-3" href="#" data-bigpicture='{ "imgSrc": "assets/img/11.jpg" }'>
-              <img class="img-fluid" src="assets/img/11.jpg" alt="..." />
+            <a class="d-block mb-3" href="#" data-bigpicture='{ "imgSrc": "assets/img/yum-kai.jpg" }'>
+              <img class="img-fluid" src="assets/img/yum-kai.jpg" alt="..." />
             </a>
           </div>
           <div class="col-6 col-sm-6 col-md-4">
             <!-- Item -->
-            <a class="d-block mb-3" href="#" data-bigpicture='{ "imgSrc": "assets/img/16.jpg" }'>
-              <img class="img-fluid" src="assets/img/16.jpg" alt="..." />
+            <a class="d-block mb-3" href="#" data-bigpicture='{ "imgSrc": "assets/img/main2.jpg" }'>
+              <img class="img-fluid" src="assets/img/main2.jpg" alt="..." />
             </a>
           </div>
           <div class="col-6 col-sm-6 col-md-4">
             <!-- Item -->
-            <a class="d-block mb-3" href="#" data-bigpicture='{ "imgSrc": "assets/img/13.jpg" }'>
-              <img class="img-fluid" src="assets/img/13.jpg" alt="..." />
+            <a class="d-block mb-3" href="#" data-bigpicture='{ "imgSrc": "assets/img/pad-ke-mow.jpg" }'>
+              <img class="img-fluid" src="assets/img/pad-ke-mow.jpg" alt="..." />
             </a>
           </div>
           <div class="col-6 col-sm-6 col-md-4">
             <!-- Item -->
-            <a class="d-block mb-3" href="#" data-bigpicture='{ "imgSrc": "assets/img/15.jpg" }'>
-              <img class="img-fluid" src="assets/img/15.jpg" alt="..." />
+            <a class="d-block mb-3" href="#" data-bigpicture='{ "imgSrc": "assets/img/chicken-wings.jpg" }'>
+              <img class="img-fluid" src="assets/img/chicken-wings.jpg" alt="..." />
             </a>
           </div>
           <div class="col-6 col-sm-6 col-md-4">
             <!-- Item -->
-            <a class="d-block mb-3" href="#" data-bigpicture='{ "imgSrc": "assets/img/14.jpg" }'>
-              <img class="img-fluid" src="assets/img/14.jpg" alt="..." />
+            <a class="d-block mb-3" href="#" data-bigpicture='{ "imgSrc": "assets/img/cream-cheese-wonton.jpg" }'>
+              <img class="img-fluid" src="assets/img/cream-cheese-wonton.jpg" alt="..." />
             </a>
           </div>
           <div class="col-6 col-sm-6 col-md-4">
             <!-- Item -->
-            <a class="d-block mb-3" href="#" data-bigpicture='{ "imgSrc": "assets/img/18.jpg" }'>
-              <img class="img-fluid" src="assets/img/18.jpg" alt="..." />
+            <a class="d-block mb-3" href="#" data-bigpicture='{ "imgSrc": "assets/img/fresh-roll.jpg" }'>
+              <img class="img-fluid" src="assets/img/fresh-roll.jpg" alt="..." />
             </a>
           </div>
           <div class="col-6 col-sm-6 col-md-4">
             <!-- Item -->
-            <a class="d-block mb-3" href="#" data-bigpicture='{ "imgSrc": "assets/img/17.jpg" }'>
-              <img class="img-fluid" src="assets/img/17.jpg" alt="..." />
+            <a class="d-block mb-3" href="#" data-bigpicture='{ "imgSrc": "assets/img/chicken-larb.jpg" }'>
+              <img class="img-fluid" src="assets/img/chicken-larb.jpg" alt="..." />
             </a>
           </div>
           <div class="col-6 col-sm-6 col-md-4">
             <!-- Item -->
-            <a class="d-block mb-3" href="#" data-bigpicture='{ "imgSrc": "assets/img/12.jpg" }'>
-              <img class="img-fluid" src="assets/img/12.jpg" alt="..." />
+            <a class="d-block mb-3" href="#" data-bigpicture='{ "imgSrc": "assets/img/fried-rice.jpg" }'>
+              <img class="img-fluid" src="assets/img/fried-rice.jpg" alt="..." />
             </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- NEWSLETTER -->
-    <section class="py-7 py-md-9 bg-light">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-8 col-lg-6 text-center">
-            <!-- Heading -->
-            <h2 class="mb-2">Newsletter</h2>
-
-            <!-- Subheading -->
-            <p class="mb-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam illo praesentium sequi in cum, beatae maiores quae qui.</p>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-lg-6">
-            <!-- Begin Mailchimp Signup Form -->
-            <div id="mc_embed_signup">
-              <form
-                action="https://gmail.us6.list-manage.com/subscribe/post?u=c7b7808bb5a16b9f09c4e1fe0&amp;id=96b8442f9a"
-                method="post"
-                id="mc-embedded-subscribe-form"
-                name="mc-embedded-subscribe-form"
-                target="_blank"
-                novalidate
-              >
-                <div class="row justify-content-center gx-3" id="mc_embed_signup_scroll">
-                  <div class="col">
-                    <label class="visually-hidden" for="mce-EMAIL">Email Address </label>
-                    <input class="form-control" type="email" value="" name="EMAIL" id="mce-EMAIL" />
-                  </div>
-                  <div class="visually-hidden" id="mce-responses">
-                    <div class="response" id="mce-error-response" style="display: none"></div>
-                    <div class="response" id="mce-success-response" style="display: none"></div>
-                  </div>
-                  <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                  <div style="position: absolute; left: -5000px" aria-hidden="true">
-                    <input type="text" name="b_c7b7808bb5a16b9f09c4e1fe0_96b8442f9a" tabindex="-1" value="" />
-                  </div>
-                  <div class="col-auto">
-                    <input class="btn btn-outline-primary" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" />
-                  </div>
-                </div>
-              </form>
-            </div>
-            <!--End mc_embed_signup-->
-          </div>
-        </div>
-      </div>
-    </section>
+    
 
     <!-- FOOTER -->
     <footer class="py-7 py-md-9 bg-black">
@@ -323,8 +281,11 @@
     
             <!-- Text -->
             <div class="mb-6">
-              <div class="text-xs">Monday - Sunday</div>
+              <div class="text-xs">Monday, Wednesday &ndash; Sunday</div>
               <div class="font-serif">11:00 AM - 08:00 PM</div>
+              <div class="text-xs text-primary mt-2">
+                <span class="fas fa-circle-info me-2"></span>Closed Tuesdays
+              </div>
             </div>
           </div>
         </div>
@@ -333,7 +294,7 @@
             <!-- Copyright -->
             <div class="d-flex align-items-center">
               <hr class="hr-sm me-3" style="height: 1px" />
-              &copy; 2025 Sab Fried Frice. All rights reserved.
+              &copy; 2026 Sab Fried Rice. All rights reserved.
             </div>
           </div>
         </div>
