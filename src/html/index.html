@@ -227,7 +227,7 @@
       </section>
 
       <!-- REVIEW -->
-      <section class="band band--cream-2">
+      <section class="band band--cream">
         <div class="container">
           <div class="contain-narrow text-center">
             <hr class="rule rule--center" />
@@ -251,60 +251,35 @@
         </div>
       </section>
 
-      <!-- VISIT -->
-      <section class="band band--ink" id="visit">
+      <!-- CLOSING CTA -->
+      <!-- Deliberately slim: the footer already carries the full hours table,
+           address and delivery links. Repeating all three here put the same
+           information on screen twice within about 600px. -->
+      <section class="band band--cream-2 band--tight" id="visit">
         <div class="container">
-          <div class="text-center contain-narrow mb-5">
+          <div class="contain-narrow text-center">
             <hr class="rule rule--center" />
-            <h2>Come and eat</h2>
-          </div>
+            <h2 class="mb-3">Come and eat</h2>
+            <p class="lede mx-auto mb-4">
+              Dine in, or call ahead and we will have it ready for you.
+            </p>
 
-          <div class="info-grid">
-            <div class="info-card">
-              <h3>
-                <svg class="icon icon-lg me-2" aria-hidden="true"><use href="#i-clock"></use></svg>
-                Hours
-              </h3>
-              <table class="hours-table">
-                <caption class="visually-hidden">Opening hours by day</caption>
-                <tbody>
-                  {{#each site.hours}}
-                  <tr data-closed="{{closed}}">
-                    <th scope="row">{{day}}</th>
-                    <td>{{hours}}</td>
-                  </tr>
-                  {{/each}}
-                </tbody>
-              </table>
-            </div>
+            <div class="mb-4">{{> partials/status-chip}}</div>
 
-            <div class="info-card">
-              <h3>
-                <svg class="icon icon-lg me-2" aria-hidden="true"><use href="#i-pin"></use></svg>
-                Find us
-              </h3>
-              <p>{{site.street}}<br />{{site.city}}, {{site.region}} {{site.postalCode}}</p>
-              <a class="btn btn-mango" href="{{site.directionsUrl}}" target="_blank" rel="noopener">
+            <div class="btn-group-stack justify-content-center">
+              <a class="btn btn-order btn-lg" href="{{site.phoneHref}}">
+                <svg class="icon me-2" aria-hidden="true"><use href="#i-phone"></use></svg>
+                Call {{site.phoneDisplay}}
+              </a>
+              <a class="btn btn-ghost-ink btn-lg" href="{{site.directionsUrl}}" target="_blank" rel="noopener">
                 <svg class="icon me-2" aria-hidden="true"><use href="#i-directions"></use></svg>
                 Get directions
               </a>
             </div>
-
-            <div class="info-card">
-              <h3>
-                <svg class="icon icon-lg me-2" aria-hidden="true"><use href="#i-bag"></use></svg>
-                Order
-              </h3>
-              <p>Call us for pickup, or order delivery through our partners.</p>
-              <div class="stack">
-                <a class="btn btn-order w-100" href="{{site.phoneHref}}">Call {{site.phoneDisplay}}</a>
-                <a class="btn btn-ghost-cream w-100" href="{{site.grubhub}}" target="_blank" rel="noopener">Grubhub</a>
-                <a class="btn btn-ghost-cream w-100" href="{{site.doordash}}" target="_blank" rel="noopener">DoorDash</a>
-              </div>
-            </div>
           </div>
         </div>
       </section>
+
     </main>
 
     {{> partials/footer}}
