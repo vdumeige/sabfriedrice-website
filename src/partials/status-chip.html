@@ -1,0 +1,16 @@
+{{!--
+  Live open/closed chip. The label is filled in by theme.js against the
+  restaurant's own clock (America/Chicago), so it is correct for a visitor in
+  any timezone. The server-rendered fallback below is what shows if JS never
+  runs, so it must stay true on its own.
+--}}
+<span
+  class="status-chip"
+  data-status-chip
+  data-open-days="{{#each site.openDays}}{{this}}{{#unless @last}},{{/unless}}{{/each}}"
+  data-opens="{{site.opensTime}}"
+  data-closes="{{site.closesTime}}"
+>
+  <span class="dot" aria-hidden="true"></span>
+  <span data-status-label>{{site.hoursSummary}} · {{site.closedNote}}</span>
+</span>

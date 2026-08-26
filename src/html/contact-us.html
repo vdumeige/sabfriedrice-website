@@ -1,117 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    {{> partials/head title="Sab Fried Rice | Thai & Lao Cuisine"}}
+    {{> partials/head
+        title="Visit Us | Sab Fried Rice — 2100 Rogers Ave, Fort Smith AR"
+        description="Find Sab Fried Rice at 2100 Rogers Ave, Fort Smith, AR 72901. Open 11am–8pm Monday and Wednesday through Sunday, closed Tuesdays. Call (479) 551-2009 for pickup."
+        path="contact-us.html"
+        ogImage="hero/contact-background-1280.webp"
+    }}
   </head>
   <body>
-    <!-- NAVBAR -->
-    {{> partials/navbar variant="dark" toggle="true" page="contact-us.html"}}
+    {{> partials/icons}}
+    {{> partials/navbar page="contact"}}
 
-    <!-- HEADER -->
-    <header data-jarallax data-speed=".8" style="background-image: url(assets/img/contact-background.jpg)">
-      <div class="pt-10 pb-8 pt-md-15 pb-md-13 bg-black bg-opacity-50">
+    <main id="main">
+      <header class="hero hero--compact">
+        <img
+          class="hero__bg"
+          src="/assets/img/hero/contact-background-1280.webp"
+          srcset="/assets/img/hero/contact-background-1280.webp 1280w, /assets/img/hero/contact-background-1920.webp 1920w"
+          sizes="100vw"
+          width="1920"
+          height="1280"
+          fetchpriority="high"
+          decoding="async"
+          alt=""
+        />
         <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-12 col-md-8 col-lg-6 text-center">
-              <!-- Heading -->
-              <h1 class="display-6 fw-bold text-white">Contact Us</h1>
+          <span class="eyebrow">Fort Smith, Arkansas</span>
+          <h1>Visit us</h1>
+          <p class="lede mx-auto mb-4">
+            We are on Rogers Avenue, and the kitchen closes at 8.
+          </p>
+          {{> partials/status-chip}}
+        </div>
+      </header>
+
+      <section class="band band--cream">
+        <div class="container">
+          <div class="info-grid">
+            <div class="info-card">
+              <h3>
+                <svg class="icon icon-lg me-2" aria-hidden="true"><use href="#i-clock"></use></svg>
+                Hours
+              </h3>
+              <table class="hours-table">
+                <caption class="visually-hidden">Opening hours by day</caption>
+                <tbody>
+                  {{#each site.hours}}
+                  <tr data-closed="{{closed}}">
+                    <th scope="row">{{day}}</th>
+                    <td>{{hours}}</td>
+                  </tr>
+                  {{/each}}
+                </tbody>
+              </table>
+              <p class="mb-0 mt-3"><strong>{{site.closedNote}}.</strong></p>
             </div>
-          </div>
-        </div>
-      </div>
-    </header>
 
-    <!-- CONTACT -->
-    <section class="py-7 py-md-9">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-8 col-lg-6 text-center">
-            <!-- Heading -->
-            <h2 class="mb-2">Contact & Order Information</h2>
-            
-            <!-- Subheading -->
-            <p class="mb-6">Visit us in person or order online through our delivery partners.</p>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-md-8 text-center">
-            <!-- Contact Info -->
-            <div class="mb-5">
-              <!-- Address -->
-              <div class="mb-4">
-                <h4 class="mb-2 text-lg">Visit us</h4>
-                <p class="font-serif fs-4">
-                  <a href="https://maps.google.com/?q=2100+Rogers+Ave+Fort+Smith+AR+72901" target="_blank">
-                    2100 Rogers Ave Fort Smith, AR 72901
-                  </a>
-                </p>
-              </div>
-              
-              <!-- Phone -->
-              <div class="mb-4">
-                <h4 class="mb-2 text-lg">Call us</h4>
-                <p class="font-serif fs-4">
-                  <a href="tel:+14795512009">+1 479 551 2009</a>
-                </p>
-              </div>
-              
-              <!-- Hours -->
-              <div class="mb-4">
-                <h4 class="mb-2 text-lg">Opening hours</h4>
-                <p class="font-serif fs-4 mb-1">Monday, Wednesday &ndash; Sunday<br />11:00 AM &ndash; 8:00 PM</p>
-                <p class="text-primary mb-0">
-                  <span class="fas fa-circle-info me-2"></span>Closed Tuesdays
-                </p>
-              </div>
+            <div class="info-card">
+              <h3>
+                <svg class="icon icon-lg me-2" aria-hidden="true"><use href="#i-pin"></use></svg>
+                Address
+              </h3>
+              <address class="mb-3">
+                {{site.street}}<br />
+                {{site.city}}, {{site.region}} {{site.postalCode}}
+              </address>
+              <a class="btn btn-mango w-100" href="{{site.directionsUrl}}" target="_blank" rel="noopener">
+                <svg class="icon me-2" aria-hidden="true"><use href="#i-directions"></use></svg>
+                Get directions
+              </a>
+            </div>
 
-              <!-- Order Links -->
-              <div class="mb-5">
-                <h4 class="mb-2 text-lg">Order Online</h4>
-                <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3 mt-4">
-                  <a class="btn btn-primary btn-lg d-flex align-items-center px-4 py-3 shadow-sm" 
-                    href="https://www.grubhub.com/restaurant/sab-fried-rice-2100-rogers-avenue-fort-smith/9901984" 
-                    target="_blank" 
-                    style="min-width: 200px;">
-                    <i class="fas fa-utensils me-2"></i>
-                    <span>Order on Grubhub</span>
-                  </a>
-                  <a class="btn btn-danger btn-lg d-flex align-items-center px-4 py-3 shadow-sm" 
-                    href="https://www.doordash.com/store/31607635?event_type=autocomplete&pickup=false" 
-                    target="_blank" 
-                    style="min-width: 200px;">
-                    <i class="fas fa-motorcycle me-2"></i>
-                    <span>Order on DoorDash</span>
-                  </a>
-                </div>
-              </div>
-              
-              <!-- Social Links -->
-              <div class="mb-4">
-                <h4 class="mb-2 text-xs">Follow us</h4>
-                <div class="d-flex justify-content-center gap-4 font-serif">
-                  <a class="d-block fs-3" href="#" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                  </a>
-                  <a class="d-block fs-3" href="#" aria-label="Yelp">
-                    <i class="fab fa-yelp"></i>
-                  </a>
-                </div>
+            <div class="info-card">
+              <h3>
+                <svg class="icon icon-lg me-2" aria-hidden="true"><use href="#i-phone"></use></svg>
+                Call &amp; order
+              </h3>
+              <p>
+                Pickup orders go straight through the kitchen — calling is the fastest way, and it
+                keeps the whole ticket with us.
+              </p>
+              <div class="stack">
+                <a class="btn btn-order w-100" href="{{site.phoneHref}}">{{site.phoneDisplay}}</a>
+                <a class="btn btn-ghost-ink w-100" href="{{site.grubhub}}" target="_blank" rel="noopener">Order on Grubhub</a>
+                <a class="btn btn-ghost-ink w-100" href="{{site.doordash}}" target="_blank" rel="noopener">Order on DoorDash</a>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- MAP -->
-    <section class="bg-light" data-map='{"center": [-94.41029252410841, 35.37874523650219], "zoom": 15}' style="height: 30rem"></section>
+      </section>
 
-    <!-- FOOTER -->
+      <section class="band band--ink band--tight">
+        <div class="container">
+          <div class="row g-4 align-items-center">
+            <div class="col-md">
+              <h2 class="h3 mb-2">Follow along</h2>
+              <p class="mb-0">New dishes and specials go up on Instagram first.</p>
+            </div>
+            <div class="col-md-auto">
+              <div class="social-links">
+                <a href="{{site.instagram}}" target="_blank" rel="noopener" aria-label="Sab Fried Rice on Instagram">
+                  <svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg>
+                </a>
+                <a href="{{site.yelp}}" target="_blank" rel="noopener" aria-label="Sab Fried Rice reviews on Yelp">
+                  <svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
     {{> partials/footer}}
-
-    <!-- TOAST -->
-    {{> partials/toast}}
-
-    <!-- JAVASCRIPT -->
-    {{> partials/scripts}}
   </body>
 </html>

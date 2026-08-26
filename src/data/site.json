@@ -1,0 +1,72 @@
+{
+  "name": "Sab Fried Rice",
+  "tagline": "Thai & Lao kitchen in Fort Smith",
+  "url": "https://www.sabfriedrice.com",
+  "phoneDisplay": "(479) 551-2009",
+  "phoneHref": "tel:+14795512009",
+  "phoneSchema": "+1-479-551-2009",
+  "street": "2100 Rogers Ave",
+  "city": "Fort Smith",
+  "region": "AR",
+  "postalCode": "72901",
+  "addressLine": "2100 Rogers Ave, Fort Smith, AR 72901",
+  "latitude": 35.37874523650219,
+  "longitude": -94.41029252410841,
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=2100+Rogers+Ave%2C+Fort+Smith%2C+AR+72901",
+  "mapUrl": "https://www.google.com/maps/search/?api=1&query=2100+Rogers+Ave%2C+Fort+Smith%2C+AR+72901",
+
+  "hoursSummary": "Monday, Wednesday – Sunday, 11:00 AM – 8:00 PM",
+  "closedDay": "Tuesday",
+  "closedNote": "Closed Tuesdays",
+  "opensTime": "11:00",
+  "closesTime": "20:00",
+  "openDays": ["Monday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+
+  "hours": [
+    { "day": "Monday", "short": "Mon", "hours": "11:00 AM – 8:00 PM", "closed": false },
+    { "day": "Tuesday", "short": "Tue", "hours": "Closed", "closed": true },
+    { "day": "Wednesday", "short": "Wed", "hours": "11:00 AM – 8:00 PM", "closed": false },
+    { "day": "Thursday", "short": "Thu", "hours": "11:00 AM – 8:00 PM", "closed": false },
+    { "day": "Friday", "short": "Fri", "hours": "11:00 AM – 8:00 PM", "closed": false },
+    { "day": "Saturday", "short": "Sat", "hours": "11:00 AM – 8:00 PM", "closed": false },
+    { "day": "Sunday", "short": "Sun", "hours": "11:00 AM – 8:00 PM", "closed": false }
+  ],
+
+  "grubhub": "https://www.grubhub.com/restaurant/sab-fried-rice-2100-rogers-avenue-fort-smith/9901984",
+  "doordash": "https://www.doordash.com/store/31607635?event_type=autocomplete&pickup=false",
+  "yelp": "https://www.yelp.com/biz/sab-fried-rice-fort-smith",
+  "instagram": "https://www.instagram.com/sabfriedricellc",
+
+  "menuCategories": [
+    {
+      "name": "Appetizers & Sides",
+      "slug": "appetizers",
+      "blurb": "Small plates to open the table — crispy, fresh, and made to share."
+    },
+    {
+      "name": "Soups & Salads",
+      "slug": "soups",
+      "blurb": "Hot-and-sour broths and bright herb salads, the backbone of Lao and Thai cooking."
+    },
+    {
+      "name": "Noodle & Rice Dishes",
+      "slug": "noodles",
+      "blurb": "Wok-fired noodles and fried rice — including the dish we named the place after."
+    },
+    {
+      "name": "Entrées & Curries",
+      "slug": "entrees",
+      "blurb": "Coconut curries and stir-fries, cooked to the heat you ask for."
+    },
+    {
+      "name": "Specials",
+      "slug": "specials",
+      "blurb": "House dishes and larger plates worth making the trip for."
+    },
+    {
+      "name": "Desserts & Others",
+      "slug": "desserts",
+      "blurb": "Sweet endings and drinks, including our Thai tea."
+    }
+  ]
+}

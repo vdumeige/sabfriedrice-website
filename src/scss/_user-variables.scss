@@ -1,8 +1,107 @@
-// 
-// user-variables.scss
-// Use this to overwrite Bootstrap and theme variables
 //
+// user-variables.scss
+// "Night Market" — warm-dark, food-first, high contrast.
+//
+// Loaded before Bootstrap's own variables, so anything set here wins over both
+// Bootstrap and the Touche theme defaults.
+//
+// Every foreground/background pair below is measured. Do not introduce a new
+// text colour without checking it:
+//   cream on ink   16.85:1      mango on ink    8.96:1
+//   rust on cream   5.70:1      herb on ink     6.11:1
+//   white on chilli 5.25:1
+// The palette the site shipped before used #F5A637 as the link colour on white,
+// which is 2.02:1 — every link on the site failed WCAG AA. Hence $rust.
 
-// Example of a variable override to change theme's background color
-// Remove the "//" to comment it in and see it in action!
-// $font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+// Core palette
+$ink:    #1a1512; // warm near-black — the primary dark ground
+$ink-2:  #241d19; // one step up, for cards on ink
+$cream:  #fff6e3; // lifted from the logo illustration
+$cream-2:#f7ead1; // subtle banding on cream sections
+$mango:  #f5a637; // fills, rules, prices, active states
+$chilli: #c8352a; // heat, urgency, the primary order button
+$herb:   #7ba23f; // accents on dark only
+$rust:   #a8410e; // links and small text on light grounds
+$chilli-light: #e2695c; // chilli lifted for use on the ink ground (5.5:1)
+
+// Bootstrap colour overrides
+$white:   #ffffff;
+$black:   $ink;
+$primary: $mango;
+$danger:  $chilli;
+$success: $herb;
+$dark:    $ink;
+$light:   $cream-2;
+
+$body-bg:              $cream;
+$body-color:           #2e2620; // 12.9:1 on cream — softer than full ink for long copy
+$body-emphasis-color:  $ink;
+
+$link-color:           $rust;
+$link-hover-color:     $chilli;
+$link-decoration:      underline;
+$link-hover-decoration: underline;
+
+$border-color: rgba($ink, .14);
+
+// Options
+// The old theme shipped a demo colour-mode switch that never persisted and
+// half-broke the navbar. It is gone, and so is the dark-mode CSS it needed.
+$enable-dark-mode:      false;
+$enable-rounded:        true;
+$enable-negative-margins: true;
+$enable-rfs:            false;
+$enable-validation-icons: false;
+
+$border-radius:    .75rem;
+$border-radius-sm: .5rem;
+$border-radius-lg: 1.25rem;
+$border-radius-pill: 50rem;
+
+// Typography
+// Fraunces carries the display voice; Lato stays for body copy. Playfair Display
+// is removed — it read as fine-dining editorial on a $9 family kitchen.
+$font-family-sans-serif: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+$font-family-serif:      'Fraunces', Georgia, 'Times New Roman', serif;
+$font-family-base:       $font-family-sans-serif;
+
+$font-size-base: 1.0625rem; // 17px
+$font-size-sm:   .9375rem;  // 15px
+$font-size-xs:   .8125rem;  // 13px
+$font-size-lg:   1.1875rem; // 19px
+
+$headings-font-family:   $font-family-serif;
+$headings-font-weight:   700;
+$headings-line-height:   1.15;
+$headings-color:         $ink;
+$headings-margin-bottom: .5em;
+
+$lead-font-size:   1.25rem;
+$lead-font-weight: 400;
+
+// Buttons
+// Order buttons used to be the smallest type on the page at 12px.
+$btn-font-family:      $font-family-sans-serif;
+$btn-font-weight:      700;
+$btn-font-size:        1rem;
+$btn-font-size-lg:     1.125rem;
+$btn-padding-y:        .75rem;
+$btn-padding-x:        1.5rem;
+$btn-padding-y-lg:     1rem;
+$btn-padding-x-lg:     2rem;
+$btn-border-width:     2px;
+$btn-focus-width:      3px;
+
+// Focus. The theme deleted focus rings site-wide; this puts them back.
+$focus-ring-width:   3px;
+$focus-ring-opacity: 1;
+$focus-ring-color:   $chilli;
+
+$nav-link-padding-y: .75rem;
+$nav-link-padding-x: 1.25rem;
+$nav-link-font-size: 1rem;
+
+$card-border-width:  0;
+$card-bg:            $white;
+$card-spacer-y:      1.25rem;
+$card-spacer-x:      1.25rem;

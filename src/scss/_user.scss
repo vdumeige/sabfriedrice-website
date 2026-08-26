@@ -1,15 +1,884 @@
-// 
-// user.scss
-// Use this to write your custom SCSS
 //
+// user.scss — "Night Market" components
+//
+// Loaded last, after Bootstrap's utilities API, so it can override anything.
+// The layout principle is "one band, one decision": full-bleed horizontal bands
+// alternate between the ink and cream grounds, and each asks for one action.
 
-.card-img-top {
-    aspect-ratio: 4/3;
+// ---------------------------------------------------------------------------
+// Foundations
+// ---------------------------------------------------------------------------
+
+:root {
+  --sab-ink: #{$ink};
+  --sab-ink-2: #{$ink-2};
+  --sab-cream: #{$cream};
+  --sab-cream-2: #{$cream-2};
+  --sab-mango: #{$mango};
+  --sab-chilli: #{$chilli};
+  --sab-herb: #{$herb};
+  --sab-rust: #{$rust};
+  --sab-nav-h: 4.5rem;
+}
+
+html {
+  scroll-behavior: smooth;
+  // The sticky header would otherwise cover in-page anchor targets.
+  scroll-padding-top: calc(var(--sab-nav-h) + 1rem);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+// The theme removed focus rings entirely. Restore a visible, high-contrast one.
+:focus-visible {
+  outline: 3px solid $chilli;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.band--ink :focus-visible,
+.site-footer :focus-visible,
+.site-nav :focus-visible {
+  outline-color: $mango;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 2000;
+  padding: .75rem 1.25rem;
+  background: $mango;
+  color: $ink;
+  font-weight: 700;
+  border-radius: $border-radius-sm;
+  transition: top .15s ease;
+
+  &:focus {
+    top: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Type
+// ---------------------------------------------------------------------------
+
+h1, .h1 { font-size: clamp(2.25rem, 1.4rem + 3.6vw, 4rem); letter-spacing: -.02em; }
+h2, .h2 { font-size: clamp(1.75rem, 1.2rem + 2.2vw, 2.75rem); letter-spacing: -.015em; }
+h3, .h3 { font-size: clamp(1.35rem, 1.1rem + 1vw, 1.75rem); }
+h4, .h4 { font-size: 1.25rem; }
+h5, .h5 { font-size: 1.0625rem; }
+
+// Fraunces is a variable font; these axes give it the soft, slightly wonky
+// warmth that keeps it from reading as a stiff serif.
+h1, .h1, h2, .h2, h3, .h3, .display-font {
+  font-variation-settings: 'SOFT' 40, 'WONK' 1, 'opsz' 84;
+}
+
+.eyebrow {
+  font-family: $font-family-sans-serif;
+  font-size: .8125rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: $rust;
+  margin-bottom: .75rem;
+  display: block;
+}
+
+.band--ink .eyebrow,
+.hero .eyebrow,
+.site-footer .eyebrow { color: $mango; }
+
+.lede {
+  font-size: clamp(1.0625rem, 1rem + .4vw, 1.25rem);
+  line-height: 1.6;
+  max-width: 62ch;
+}
+
+.price {
+  font-family: $font-family-serif;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: $ink;
+  white-space: nowrap;
+}
+
+.band--ink .price { color: $mango; }
+
+// ---------------------------------------------------------------------------
+// Bands
+// ---------------------------------------------------------------------------
+
+.band {
+  padding-block: clamp(3rem, 2rem + 5vw, 6rem);
+}
+
+.band--tight { padding-block: clamp(2rem, 1.5rem + 3vw, 3.5rem); }
+
+.band--cream { background: $cream; }
+.band--cream-2 { background: $cream-2; }
+
+.band--ink {
+  background: $ink;
+  color: rgba($cream, .88);
+
+  h1, h2, h3, h4, h5, .h1, .h2, .h3 { color: $cream; }
+  a:not(.btn) { color: $mango; }
+  a:not(.btn):hover { color: $white; }
+  hr { border-color: rgba($cream, .25); }
+}
+
+.rule {
+  width: 3.5rem;
+  height: 3px;
+  background: $mango;
+  border: 0;
+  opacity: 1;
+  margin: 0 0 1.25rem;
+  border-radius: 2px;
+}
+
+.rule--center { margin-inline: auto; }
+
+// ---------------------------------------------------------------------------
+// Navbar
+// ---------------------------------------------------------------------------
+
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  min-height: var(--sab-nav-h);
+  background: $ink;
+  border-bottom: 1px solid rgba($cream, .1);
+
+  .navbar-brand img {
+    display: block;
+    height: 2.25rem;
+    width: auto;
+  }
+
+  .nav-link {
+    color: rgba($cream, .82);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: .625rem 1rem;
+    border-radius: $border-radius-sm;
+
+    &:hover,
+    &:focus-visible { color: $cream; }
+
+    &.active {
+      color: $mango;
+    }
+  }
+
+  .navbar-toggler {
+    border: 2px solid rgba($cream, .3);
+    color: $cream;
+    padding: .5rem .75rem;
+    border-radius: $border-radius-sm;
+
+    &:focus { box-shadow: none; }
+  }
+}
+
+// The default Bootstrap toggler icon is a background-image referencing an
+// inlined SVG in the theme's colours; draw it ourselves instead.
+.navbar-toggler-bars {
+  display: block;
+  width: 1.375rem;
+  height: 2px;
+  background: currentColor;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: currentColor;
+  }
+
+  &::before { top: -7px; }
+  &::after  { top: 7px; }
+}
+
+// ---------------------------------------------------------------------------
+// Status chip — "Open today until 8 PM" / "Closed today"
+// ---------------------------------------------------------------------------
+
+.status-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .5rem 1rem;
+  border-radius: $border-radius-pill;
+  font-weight: 700;
+  font-size: .9375rem;
+  background: rgba($cream, .1);
+  border: 1px solid rgba($cream, .22);
+  color: $cream;
+
+  .dot {
+    width: .5rem;
+    height: .5rem;
+    border-radius: 50%;
+    background: $herb;
+    flex: none;
+  }
+
+  &[data-state='closed'] .dot { background: $chilli; }
+  &[data-state='closed'] { border-color: rgba($chilli, .5); }
+}
+
+.band--cream .status-chip,
+.band--cream-2 .status-chip {
+  background: rgba($ink, .05);
+  border-color: rgba($ink, .18);
+  color: $ink;
+}
+
+// ---------------------------------------------------------------------------
+// Hero
+// ---------------------------------------------------------------------------
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: min(78vh, 44rem);
+  padding-block: clamp(3rem, 2rem + 6vw, 6rem);
+  background: $ink center / cover no-repeat;
+  color: $cream;
+  overflow: hidden;
+
+  // The background is a real <img>, not a CSS background: it is the LCP element
+  // on every page, and only an <img> can carry srcset + fetchpriority="high".
+  &__bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    z-index: 0;
   }
 
-  .navbar .nav-link {
-    font-size: 1.3rem !important;
-    font-weight: 800 !important;
-    padding: 0.5rem 1rem !important;
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    // Directional scrim: heavy behind the copy column on the left so cream text
+    // clears AA comfortably, light on the right so the wood texture is actually
+    // visible. A flat 0.72-0.88 vertical wash rendered the photo as pure black.
+    background:
+      linear-gradient(100deg, rgba($ink, .94) 0%, rgba($ink, .82) 42%, rgba($ink, .42) 100%),
+      linear-gradient(180deg, rgba($ink, .35) 0%, rgba($ink, 0) 30%, rgba($ink, .55) 100%);
   }
+
+  > .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  h1 { color: $cream; }
+}
+
+.hero--compact {
+  min-height: min(42vh, 24rem);
+  text-align: center;
+
+  // Centred copy needs an even wash, not the homepage's left-weighted one.
+  &::after {
+    background: linear-gradient(180deg, rgba($ink, .78) 0%, rgba($ink, .62) 50%, rgba($ink, .86) 100%);
+  }
+}
+
+.hero__illustration {
+  display: block;
+  width: min(100%, 19rem);
+  height: auto;
+  margin-inline: auto;
+  filter: drop-shadow(0 1.5rem 2.5rem rgba(0, 0, 0, .45));
+}
+
+// $link-color is rust, tuned for cream grounds. On the hero's dark photo it is
+// about 2:1, so links there take the mango used on every other dark surface.
+.hero a:not(.btn) {
+  color: $mango;
+
+  &:hover,
+  &:focus-visible { color: $cream; }
+}
+
+.hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1.5rem;
+  color: rgba($cream, .82);
+  font-size: .9375rem;
+}
+
+// ---------------------------------------------------------------------------
+// Buttons
+// ---------------------------------------------------------------------------
+
+.btn {
+  border-radius: $border-radius-pill;
+  line-height: 1.2;
+}
+
+.btn-order {
+  @include button-variant($chilli, $chilli, $white, darken($chilli, 7%), darken($chilli, 7%), $white);
+  color: $white;
+}
+
+.btn-mango {
+  @include button-variant($mango, $mango, $ink, darken($mango, 8%), darken($mango, 8%), $ink);
+  color: $ink;
+}
+
+.btn-ghost-cream {
+  border-color: rgba($cream, .5);
+  color: $cream;
+
+  &:hover,
+  &:focus-visible {
+    background: $cream;
+    border-color: $cream;
+    color: $ink;
+  }
+}
+
+.btn-ghost-ink {
+  border-color: rgba($ink, .35);
+  color: $ink;
+
+  &:hover,
+  &:focus-visible {
+    background: $ink;
+    border-color: $ink;
+    color: $cream;
+  }
+}
+
+.btn-group-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+}
+
+// ---------------------------------------------------------------------------
+// Dish rail — CSS scroll-snap, replacing the Flickity carousel
+// ---------------------------------------------------------------------------
+
+.dish-grid {
+  display: grid;
+  gap: 1.5rem;
+  // Explicit breakpoints rather than an auto-fit track with a percentage floor:
+  // inside auto-fit that percentage resolves against an indefinite size and
+  // collapses, which gave five 209px columns here instead of three 356px ones.
+  grid-template-columns: 1fr;
+
+  @include media-breakpoint-up(sm) { grid-template-columns: repeat(2, 1fr); }
+  @include media-breakpoint-up(lg) { grid-template-columns: repeat(3, 1fr); }
+}
+
+.dish-card {
+  display: flex;
+  flex-direction: column;
+  background: $ink-2;
+  border-radius: $border-radius-lg;
+  overflow: hidden;
+  height: 100%;
+
+  img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__body {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    flex: 1;
+  }
+
+  &__head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 1.1875rem;
+    color: $cream;
+  }
+
+  p {
+    margin: 0;
+    color: rgba($cream, .72);
+    font-size: .9375rem;
+    line-height: 1.55;
+  }
+}
+
+.band--cream .dish-card,
+.band--cream-2 .dish-card {
+  background: $white;
+
+  h3 { color: $ink; }
+  p { color: rgba($ink, .72); }
+}
+
+// ---------------------------------------------------------------------------
+// Menu
+// ---------------------------------------------------------------------------
+
+// Category pills. The old six tabs totalled 881px of labels, wrapped to three
+// ragged lines on a phone and had 36px tap targets.
+.menu-nav {
+  position: sticky;
+  top: var(--sab-nav-h);
+  z-index: 1020;
+  background: rgba($cream, .95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba($ink, .1);
+  margin-bottom: 2.5rem;
+}
+
+.menu-nav__scroller {
+  display: flex;
+  gap: .5rem;
+  overflow-x: auto;
+  padding: .75rem .25rem;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar { display: none; }
+}
+
+.menu-nav__link {
+  flex: none;
+  min-height: 2.75rem; // 44px touch target
+  display: inline-flex;
+  align-items: center;
+  padding: .5rem 1rem;
+  border-radius: $border-radius-pill;
+  background: rgba($ink, .06);
+  color: $ink;
+  font-weight: 700;
+  font-size: .9375rem;
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:hover { background: rgba($ink, .12); color: $ink; }
+
+  &.is-active {
+    background: $ink;
+    color: $cream;
+  }
+}
+
+.menu-section + .menu-section { margin-top: 3.5rem; }
+
+.menu-section__head {
+  margin-bottom: 1.5rem;
+  padding-bottom: .75rem;
+  border-bottom: 2px solid rgba($ink, .12);
+}
+
+.menu-list {
+  display: grid;
+  gap: .25rem;
+  grid-template-columns: 1fr;
+
+  @include media-breakpoint-up(lg) { grid-template-columns: repeat(2, 1fr); }
+}
+
+.menu-row {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1rem .25rem;
+  border-bottom: 1px solid rgba($ink, .1);
+
+  &__thumb {
+    flex: none;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: $border-radius-sm;
+    object-fit: cover;
+    display: block;
+    background: rgba($ink, .06);
+  }
+
+  &__body { flex: 1; min-width: 0; }
+
+  &__head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: .75rem;
+  }
+
+  h3 {
+    font-size: 1.0625rem;
+    font-weight: 700;
+    margin: 0 0 .125rem;
+    line-height: 1.35;
+  }
+
+  p {
+    margin: 0;
+    font-size: .9375rem;
+    color: rgba($ink, .68);
+    line-height: 1.5;
+  }
+}
+
+.menu-note {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .875rem 1.125rem;
+  border-radius: $border-radius;
+  background: rgba($chilli, .08);
+  border-left: 4px solid $chilli;
+  color: $ink;
+  font-size: .9375rem;
+}
+
+// ---------------------------------------------------------------------------
+// Reviews
+// ---------------------------------------------------------------------------
+
+.review {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100%;
+  padding: 1.75rem;
+  background: rgba($cream, .06);
+  border: 1px solid rgba($cream, .14);
+  border-radius: $border-radius-lg;
+
+  blockquote {
+    margin: 0;
+    font-family: $font-family-serif;
+    font-size: 1.0625rem;
+    line-height: 1.55;
+    color: $cream;
+  }
+
+  figcaption {
+    font-size: .875rem;
+    color: rgba($cream, .66);
+  }
+}
+
+.stars {
+  color: $mango;
+  letter-spacing: .1em;
+  font-size: .9375rem;
+}
+
+// ---------------------------------------------------------------------------
+// Info cards (hours, find us, order)
+// ---------------------------------------------------------------------------
+
+.info-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+
+  @include media-breakpoint-up(md) { grid-template-columns: repeat(3, 1fr); }
+}
+
+.info-card {
+  padding: 1.75rem;
+  border-radius: $border-radius-lg;
+  background: $white;
+  border: 1px solid rgba($ink, .1);
+  height: 100%;
+
+  h3 { font-size: 1.25rem; margin-bottom: 1rem; }
+}
+
+.band--ink .info-card {
+  background: $ink-2;
+  border-color: rgba($cream, .14);
+}
+
+.hours-table {
+  width: 100%;
+  font-size: .9375rem;
+
+  th, td { padding: .375rem 0; font-weight: 400; text-align: left; }
+  td { text-align: right; font-variant-numeric: tabular-nums; }
+
+  tr[data-closed='true'] {
+    color: $chilli; // 5.4:1 on cream
+    font-weight: 700;
+  }
+
+  // $chilli is only 3.45:1 on ink, so dark grounds get the lifted tint (5.5:1).
+  .band--ink &,
+  .site-footer & {
+    tr[data-closed='true'] { color: $chilli-light; }
+  }
+
+  tr[data-today='true'] th::after {
+    content: 'Today';
+    display: inline-block;
+    margin-left: .5rem;
+    padding: .0625rem .5rem;
+    border-radius: $border-radius-pill;
+    background: $mango;
+    color: $ink;
+    font-size: .6875rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Gallery — CSS columns, replacing Isotope
+// ---------------------------------------------------------------------------
+
+.gallery {
+  columns: 3 16rem;
+  column-gap: 1rem;
+}
+
+.gallery__item {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+  display: block;
+  border-radius: $border-radius;
+  overflow: hidden;
+  background: rgba($ink, .06);
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform .35s ease;
+  }
+
+  &:hover img,
+  &:focus-visible img { transform: scale(1.03); }
+}
+
+// Native <dialog> lightbox, replacing BigPicture
+.lightbox {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  max-width: min(92vw, 60rem);
+  max-height: 92vh;
+
+  &::backdrop { background: rgba($ink, .92); }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 82vh;
+    object-fit: contain;
+    border-radius: $border-radius;
+  }
+}
+
+.lightbox__close {
+  position: absolute;
+  top: -3rem;
+  right: 0;
+  background: none;
+  border: 0;
+  color: $cream;
+  font-size: 1.75rem;
+  line-height: 1;
+  padding: .5rem;
+  cursor: pointer;
+}
+
+// ---------------------------------------------------------------------------
+// Sticky order bar (mobile)
+// ---------------------------------------------------------------------------
+
+.order-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1040;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: $ink;
+  border-top: 1px solid rgba($cream, .14);
+  padding-bottom: env(safe-area-inset-bottom);
+
+  a {
+    min-height: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .125rem;
+    color: $cream;
+    font-size: .75rem;
+    font-weight: 700;
+    text-decoration: none;
+
+    svg { width: 1.125rem; height: 1.125rem; }
+
+    &:hover, &:focus-visible { background: rgba($cream, .08); color: $mango; }
+  }
+
+  a + a { border-left: 1px solid rgba($cream, .14); }
+
+  @include media-breakpoint-up(lg) { display: none; }
+}
+
+// Keep the bar from covering the last of the page.
+body:has(.order-bar) .site-footer { padding-bottom: 5rem; }
+
+@include media-breakpoint-up(lg) {
+  body:has(.order-bar) .site-footer { padding-bottom: 0; }
+}
+
+// ---------------------------------------------------------------------------
+// Media / story blocks
+// ---------------------------------------------------------------------------
+
+.story {
+  display: grid;
+  gap: clamp(1.5rem, 1rem + 3vw, 3.5rem);
+  align-items: center;
+  grid-template-columns: 1fr;
+
+  @include media-breakpoint-up(md) {
+    grid-template-columns: 1fr 1fr;
+
+    &--reverse .story__media { order: 2; }
+  }
+}
+
+.story__media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: $border-radius-lg;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+// ---------------------------------------------------------------------------
+// Icons
+// ---------------------------------------------------------------------------
+
+.icon {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  vertical-align: -.125em;
+  flex: none;
+}
+
+.icon-lg { width: 1.5rem; height: 1.5rem; }
+
+// ---------------------------------------------------------------------------
+// Footer
+// ---------------------------------------------------------------------------
+
+.site-footer {
+  background: $ink;
+  color: rgba($cream, .78);
+  padding-block: clamp(2.5rem, 2rem + 3vw, 4rem);
+
+  h2, h3 { color: $cream; font-size: 1.0625rem; }
+
+  // Must exclude .btn: this rule outspecifies .btn-mango and was painting the
+  // footer's call-to-order button cream-on-mango at 1.66:1.
+  a:not(.btn) { color: rgba($cream, .8); text-decoration: none; }
+  a:not(.btn):hover, a:not(.btn):focus-visible { color: $mango; text-decoration: underline; }
+
+  .eyebrow { color: $mango; }
+}
+
+.footer-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+
+  @include media-breakpoint-up(sm) { grid-template-columns: repeat(2, 1fr); }
+  @include media-breakpoint-up(lg) { grid-template-columns: repeat(4, 1fr); }
+}
+
+.footer-bottom {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba($cream, .14);
+  font-size: .875rem;
+  color: rgba($cream, .6);
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1.5rem;
+  justify-content: space-between;
+}
+
+.social-links {
+  display: flex;
+  gap: .75rem;
+
+  a {
+    width: 2.75rem;
+    height: 2.75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid rgba($cream, .22);
+
+    &:hover, &:focus-visible {
+      background: $mango;
+      border-color: $mango;
+      color: $ink;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Utilities
+// ---------------------------------------------------------------------------
+
+.contain-narrow { max-width: 46rem; margin-inline: auto; }
+.contain-mid { max-width: 62rem; margin-inline: auto; }
+
+.stack > * + * { margin-top: 1rem; }

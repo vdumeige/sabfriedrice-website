@@ -1,95 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    {{> partials/head title="Sab Fried Rice | Thai & Lao Cuisine"}}
+    {{> partials/head
+        title="Gallery | Sab Fried Rice — Thai & Lao Food in Fort Smith"
+        description="Photographs of the food we cook at Sab Fried Rice in Fort Smith: drunken noodles, laab, wontons, spring rolls, wings and pineapple fried rice."
+        path="gallery.html"
+        ogImage="card/pad-ke-mow-960.webp"
+    }}
   </head>
   <body>
-    <!-- NAVBAR -->
-    {{> partials/navbar variant="dark" toggle="true" page="gallery.html"}}
+    {{> partials/icons}}
+    {{> partials/navbar page="gallery"}}
 
-    <!-- HEADER -->
-    <header style="background-image: url(assets/img/menu-background.webp); background-size: cover; background-position: center;">
-      <div class="pt-10 pb-8 pt-md-15 pb-md-13 bg-black bg-opacity-50">
+    <main id="main">
+      <header class="hero hero--compact">
+        <img
+          class="hero__bg"
+          src="/assets/img/hero/menu-background-1280.webp"
+          srcset="/assets/img/hero/menu-background-1280.webp 1280w, /assets/img/hero/menu-background-1920.webp 1920w"
+          sizes="100vw"
+          width="1920"
+          height="1280"
+          fetchpriority="high"
+          decoding="async"
+          alt=""
+        />
         <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-12 col-md-8 col-lg-6 text-center">
-              <!-- Heading -->
-              <h1 class="display-6 fw-bold text-white">Our Gallery</h1>
-            </div>
-          </div>
+          <span class="eyebrow">On the plate</span>
+          <h1>Gallery</h1>
         </div>
-      </div>
-    </header>
+      </header>
 
-    
+      <section class="band band--cream">
+        <div class="container">
+          <!-- CSS multi-column, replacing the Isotope layout engine. Each item
+               opens in a native <dialog>, replacing BigPicture. -->
+          <div class="gallery">
+            <a class="gallery__item" href="/assets/img/card/pad-ke-mow-960.webp" data-lightbox="/assets/img/card/pad-ke-mow-960.webp" data-lightbox-alt="Pad ke mow — wide rice noodles with basil and chilli.">
+              <img src="/assets/img/card/pad-ke-mow-640.webp" width="640" height="480" loading="lazy" decoding="async" alt="Pad ke mow — wide rice noodles with basil and chilli." />
+            </a>
+            <a class="gallery__item" href="/assets/img/card/chicken-larb-960.webp" data-lightbox="/assets/img/card/chicken-larb-960.webp" data-lightbox-alt="Laab — minced meat salad with herbs and toasted rice powder.">
+              <img src="/assets/img/card/chicken-larb-640.webp" width="640" height="480" loading="lazy" decoding="async" alt="Laab — minced meat salad with herbs and toasted rice powder." />
+            </a>
+            <a class="gallery__item" href="/assets/img/card/fried-rice-960.webp" data-lightbox="/assets/img/card/fried-rice-960.webp" data-lightbox-alt="Pineapple fried rice with egg, peas and cashews.">
+              <img src="/assets/img/card/fried-rice-640.webp" width="640" height="480" loading="lazy" decoding="async" alt="Pineapple fried rice with egg, peas and cashews." />
+            </a>
+            <a class="gallery__item" href="/assets/img/card/cream-cheese-wonton-960.webp" data-lightbox="/assets/img/card/cream-cheese-wonton-960.webp" data-lightbox-alt="Cream cheese wontons, fried crisp.">
+              <img src="/assets/img/card/cream-cheese-wonton-640.webp" width="640" height="480" loading="lazy" decoding="async" alt="Cream cheese wontons, fried crisp." />
+            </a>
+            <a class="gallery__item" href="/assets/img/card/fresh-roll-960.webp" data-lightbox="/assets/img/card/fresh-roll-960.webp" data-lightbox-alt="Fresh spring rolls in rice paper with herbs and vegetables.">
+              <img src="/assets/img/card/fresh-roll-640.webp" width="640" height="480" loading="lazy" decoding="async" alt="Fresh spring rolls in rice paper with herbs and vegetables." />
+            </a>
+            <a class="gallery__item" href="/assets/img/card/chicken-wings-960.webp" data-lightbox="/assets/img/card/chicken-wings-960.webp" data-lightbox-alt="Fried chicken wings in seasoned flour.">
+              <img src="/assets/img/card/chicken-wings-640.webp" width="640" height="480" loading="lazy" decoding="async" alt="Fried chicken wings in seasoned flour." />
+            </a>
+            <a class="gallery__item" href="/assets/img/card/nam-khao-960.webp" data-lightbox="/assets/img/card/nam-khao-960.webp" data-lightbox-alt="Nam khao — crispy rice salad served with lettuce leaves.">
+              <img src="/assets/img/card/nam-khao-640.webp" width="640" height="480" loading="lazy" decoding="async" alt="Nam khao — crispy rice salad served with lettuce leaves." />
+            </a>
+            <a class="gallery__item" href="/assets/img/card/tom-yum-960.webp" data-lightbox="/assets/img/card/tom-yum-960.webp" data-lightbox-alt="Tom yum combination seafood soup in a hot pot.">
+              <img src="/assets/img/card/tom-yum-640.webp" width="640" height="480" loading="lazy" decoding="async" alt="Tom yum combination seafood soup in a hot pot." />
+            </a>
+            <a class="gallery__item" href="/assets/img/card/sab-sampler-960.webp" data-lightbox="/assets/img/card/sab-sampler-960.webp" data-lightbox-alt="The Sab Sampler — an assortment of fried appetisers.">
+              <img src="/assets/img/card/sab-sampler-640.webp" width="640" height="480" loading="lazy" decoding="async" alt="The Sab Sampler — an assortment of fried appetisers." />
+            </a>
+            <a class="gallery__item" href="/assets/img/card/green-curry-960.webp" data-lightbox="/assets/img/card/green-curry-960.webp" data-lightbox-alt="Green curry with Thai eggplant and basil.">
+              <img src="/assets/img/card/green-curry-640.webp" width="640" height="480" loading="lazy" decoding="async" alt="Green curry with Thai eggplant and basil." />
+            </a>
+            <a class="gallery__item" href="/assets/img/card/main2-960.webp" data-lightbox="/assets/img/card/main2-960.webp" data-lightbox-alt="A finished plate ready to leave the pass.">
+              <img src="/assets/img/card/main2-640.webp" width="640" height="480" loading="lazy" decoding="async" alt="A finished plate ready to leave the pass." />
+            </a>
+            <a class="gallery__item" href="/assets/img/card/main1-960.webp" data-lightbox="/assets/img/card/main1-960.webp" data-lightbox-alt="Sab fried rice with shrimp and chicken.">
+              <img src="/assets/img/card/main1-640.webp" width="640" height="480" loading="lazy" decoding="async" alt="Sab fried rice with shrimp and chicken." />
+            </a>
+          </div>
 
-    <!-- GALLERY -->
-    <section class="py-7 py-md-9">
-      <div class="container">
-        <div class="row justify-content-center">
-        </div>
-        <div class="row gx-3" data-isotope>
-          <div class="col-6 col-sm-6 col-md-4">
-            <!-- Item -->
-            <a class="d-block mb-3" href="#" data-bigpicture='{ "imgSrc": "assets/img/yum-kai.jpg" }'>
-              <img class="img-fluid" src="assets/img/yum-kai.jpg" alt="..." />
-            </a>
-          </div>
-          <div class="col-6 col-sm-6 col-md-4">
-            <!-- Item -->
-            <a class="d-block mb-3" href="#" data-bigpicture='{ "imgSrc": "assets/img/main2.jpg" }'>
-              <img class="img-fluid" src="assets/img/main2.jpg" alt="..." />
-            </a>
-          </div>
-          <div class="col-6 col-sm-6 col-md-4">
-            <!-- Item -->
-            <a class="d-block mb-3" href="#" data-bigpicture='{ "imgSrc": "assets/img/pad-ke-mow.jpg" }'>
-              <img class="img-fluid" src="assets/img/pad-ke-mow.jpg" alt="..." />
-            </a>
-          </div>
-          <div class="col-6 col-sm-6 col-md-4">
-            <!-- Item -->
-            <a class="d-block mb-3" href="#" data-bigpicture='{ "imgSrc": "assets/img/chicken-wings.jpg" }'>
-              <img class="img-fluid" src="assets/img/chicken-wings.jpg" alt="..." />
-            </a>
-          </div>
-          <div class="col-6 col-sm-6 col-md-4">
-            <!-- Item -->
-            <a class="d-block mb-3" href="#" data-bigpicture='{ "imgSrc": "assets/img/cream-cheese-wonton.jpg" }'>
-              <img class="img-fluid" src="assets/img/cream-cheese-wonton.jpg" alt="..." />
-            </a>
-          </div>
-          <div class="col-6 col-sm-6 col-md-4">
-            <!-- Item -->
-            <a class="d-block mb-3" href="#" data-bigpicture='{ "imgSrc": "assets/img/fresh-roll.jpg" }'>
-              <img class="img-fluid" src="assets/img/fresh-roll.jpg" alt="..." />
-            </a>
-          </div>
-          <div class="col-6 col-sm-6 col-md-4">
-            <!-- Item -->
-            <a class="d-block mb-3" href="#" data-bigpicture='{ "imgSrc": "assets/img/chicken-larb.jpg" }'>
-              <img class="img-fluid" src="assets/img/chicken-larb.jpg" alt="..." />
-            </a>
-          </div>
-          <div class="col-6 col-sm-6 col-md-4">
-            <!-- Item -->
-            <a class="d-block mb-3" href="#" data-bigpicture='{ "imgSrc": "assets/img/fried-rice.jpg" }'>
-              <img class="img-fluid" src="assets/img/fried-rice.jpg" alt="..." />
+          <div class="text-center mt-6">
+            <a class="btn btn-mango btn-lg" href="/menu.html">
+              See the full menu
+              <svg class="icon ms-2" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
             </a>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    
-
-    <!-- FOOTER -->
     {{> partials/footer}}
-
-    <!-- TOAST -->
-    {{> partials/toast}}
-
-    <!-- JAVASCRIPT -->
-    {{> partials/scripts}}
   </body>
 </html>

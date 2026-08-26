@@ -1,58 +1,81 @@
-<footer class="py-7 py-md-9 bg-black">
-  <div class="container px-4">
-    <div class="row gx-7">
-      <div class="col-sm-4">
-        <!-- Heading -->
-        <h5 class="text-xs text-primary">About Us</h5>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <span class="eyebrow">Sab Fried Rice</span>
+        <p class="mb-3">
+          A family-run Thai and Lao kitchen on Rogers Avenue. Everything is cooked to order,
+          so tell us how hot you want it.
+        </p>
+        <div class="social-links">
+          <a href="{{site.instagram}}" target="_blank" rel="noopener" aria-label="Sab Fried Rice on Instagram">
+            <svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg>
+          </a>
+          <a href="{{site.yelp}}" target="_blank" rel="noopener" aria-label="Sab Fried Rice reviews on Yelp">
+            <svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg>
+          </a>
+        </div>
+      </div>
 
-        <!-- Text -->
-        <p class="mb-6">
-          At Sab Fried Rice, we're passionate about bringing authentic Thai flavors to Fort Smith, Arkansas. Our family-owned restaurant combines traditional recipes passed down through generations with locally sourced ingredients to create memorable dining experiences. Since opening our doors, we've been dedicated to sharing the vibrant tastes of Thailand while providing warm hospitality that makes every guest feel like family.
+      <div>
+        <h2 class="eyebrow">Hours</h2>
+        <table class="hours-table">
+          <caption class="visually-hidden">Opening hours by day</caption>
+          <tbody>
+            {{#each site.hours}}
+            <tr data-closed="{{closed}}">
+              <th scope="row">{{day}}</th>
+              <td>{{hours}}</td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+
+      <div>
+        <h2 class="eyebrow">Find us</h2>
+        <p class="mb-2">
+          <a href="{{site.directionsUrl}}" target="_blank" rel="noopener">{{site.addressLine}}</a>
+        </p>
+        <p class="mb-2">
+          <a href="{{site.phoneHref}}">{{site.phoneDisplay}}</a>
+        </p>
+        <p class="mb-0">
+          <a href="/menu.html">See the full menu</a>
         </p>
       </div>
-      <div class="col-sm-4">
-        <!-- Heading -->
-        <h5 class="text-xs text-primary">Contact info</h5>
 
-        <!-- List -->
-        <ul class="list-unstyled mb-6">
-          <li class="d-flex mb-2">
-            <div class="fas fa-map-marker-alt me-3 mt-2 fs-sm"></div>
-            2100 Rogers Ave Fort Smith, AR 72901
-          </li>
-          <li class="d-flex mb-2">
-            <div class="fas fa-phone me-3 mt-2 fs-sm"></div>
-            +1 479 551 2009
-          </li>
-          <!--
-          <li class="d-flex">
-            <div class="far fa-envelope me-3 mt-2 fs-sm"></div>
-            <a href="mailto:admin@domain.com">admin@domain.com</a>
-          </li> -->
-        </ul>
-      </div>
-      <div class="col-sm-4">
-        <!-- Heading -->
-        <h5 class="text-xs text-primary">Opening hours</h5>
-
-        <!-- Text -->
-        <div class="mb-6">
-          <div class="text-xs">Monday, Wednesday &ndash; Sunday</div>
-          <div class="font-serif">11:00 AM - 08:00 PM</div>
-          <div class="text-xs text-primary mt-2">
-            <span class="fas fa-circle-info me-2"></span>Closed Tuesdays
-          </div>
+      <div>
+        <h2 class="eyebrow">Order</h2>
+        <div class="stack">
+          <a class="btn btn-mango w-100" href="{{site.phoneHref}}">Call {{site.phoneDisplay}}</a>
+          <a class="btn btn-ghost-cream w-100" href="{{site.grubhub}}" target="_blank" rel="noopener">Grubhub</a>
+          <a class="btn btn-ghost-cream w-100" href="{{site.doordash}}" target="_blank" rel="noopener">DoorDash</a>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-12">
-        <!-- Copyright -->
-        <div class="d-flex align-items-center">
-          <hr class="hr-sm me-3" style="height: 1px" />
-          &copy; 2026 Sab Fried Rice. All rights reserved.
-        </div>
-      </div>
+
+    <div class="footer-bottom">
+      <span>&copy; {{year}} {{site.name}}. All rights reserved.</span>
+      <span>{{site.closedNote}} · {{site.addressLine}}</span>
     </div>
   </div>
 </footer>
+
+<!-- Mobile order bar: the three things people actually arrive wanting. -->
+<div class="order-bar">
+  <a href="{{site.phoneHref}}">
+    <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+    Call
+  </a>
+  <a href="/menu.html">
+    <svg class="icon" aria-hidden="true"><use href="#i-utensils"></use></svg>
+    Menu
+  </a>
+  <a href="{{site.directionsUrl}}" target="_blank" rel="noopener">
+    <svg class="icon" aria-hidden="true"><use href="#i-directions"></use></svg>
+    Directions
+  </a>
+</div>
+
+<script src="/assets/js/theme.bundle.js?v={{themeVersion}}" defer></script>

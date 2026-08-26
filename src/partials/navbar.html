@@ -1,55 +1,47 @@
-<nav class="navbar navbar-{{variant}} navbar-expand-lg {{#is toggle 'true'}}navbar-togglable{{/is}} fixed-top">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<nav class="site-nav navbar navbar-expand-lg" aria-label="Main">
   <div class="container">
-    <!-- Navbar brand (mobile) -->
-    <a class="navbar-brand d-lg-none" href="{{webRoot}}/index.html">
-      <img src="assets/img/Sab2-png.png" alt="Sab Fried Rice Logo" style="max-height: 40px;">
+    <a class="navbar-brand" href="/">
+      <img
+        src="/assets/img/logo/mark-180.png"
+        srcset="/assets/img/logo/mark-180.png 180w, /assets/img/logo/mark-360.png 360w"
+        sizes="140px"
+        width="180"
+        height="73"
+        alt="{{site.name}} — home"
+      />
     </a>
 
-    <!-- Navbar toggler -->
     <button
       class="navbar-toggler"
       type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarCollapse"
+      data-nav-toggle
       aria-controls="navbarCollapse"
       aria-expanded="false"
-      aria-label="Toggle navigation"
+      aria-label="Menu"
     >
-      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-bars"></span>
     </button>
 
-    <!-- Navbar collapse -->
     <div class="collapse navbar-collapse" id="navbarCollapse">
-      <!-- Left navbar nav -->
-      <ul class="navbar-nav me-auto">
+      <ul class="navbar-nav ms-lg-auto align-items-lg-center mb-3 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link {{#is page 'about-us.html'}}active{{/is}}" href="{{webRoot}}/about-us.html" style="font-size: 1.3rem; font-weight: 500; padding: 0.5rem 1rem;">About Us</a>
+          <a class="nav-link {{#is page 'menu'}}active{{/is}}" href="/menu.html" {{#is page 'menu'}}aria-current="page"{{/is}}>Menu</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{#is page 'menu.html'}}active{{/is}}" href="{{webRoot}}/menu.html" style="font-size: 1.3rem; font-weight: 500; padding: 0.5rem 1rem;">Menu</a>
-        </li>
-      </ul>
-
-      <!-- Navbar brand (centered) -->
-      <a class="navbar-brand d-none d-lg-block mx-lg-0 position-absolute start-50 translate-middle-x" href="{{webRoot}}/index.html" style="top: 50%;">
-        <img src="assets/img/Sab2-png.png" alt="Sab Fried Rice Logo" style="max-height: 40px; margin-top: -47px;">
-      </a>
-      
-      <!-- Right navbar nav -->
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link {{#is page 'gallery.html'}}active{{/is}}" href="{{webRoot}}/gallery.html" style="font-size: 1.3rem; font-weight: 500; padding: 0.5rem 1rem;">Gallery</a>
+          <a class="nav-link {{#is page 'about'}}active{{/is}}" href="/about-us.html" {{#is page 'about'}}aria-current="page"{{/is}}>Our story</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{#is page 'contact-us.html'}}active{{/is}}" href="{{webRoot}}/contact-us.html" style="font-size: 1.3rem; font-weight: 500; padding: 0.5rem 1rem;">Contact</a>
+          <a class="nav-link {{#is page 'gallery'}}active{{/is}}" href="/gallery.html" {{#is page 'gallery'}}aria-current="page"{{/is}}>Gallery</a>
         </li>
-        
-        <!-- Color mode -->
         <li class="nav-item">
-          <div class="form-check form-switch form-switch-color-mode ms-2 mt-2">
-            <input class="form-check-input" type="checkbox" role="switch" id="colorModeSwitch" />
-            <label class="form-check-label" for="colodeModeSwitch"></label>
-          </div>
+          <a class="nav-link {{#is page 'contact'}}active{{/is}}" href="/contact-us.html" {{#is page 'contact'}}aria-current="page"{{/is}}>Visit us</a>
+        </li>
+        <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+          <a class="btn btn-order" href="{{site.phoneHref}}">
+            <svg class="icon me-2" aria-hidden="true"><use href="#i-phone"></use></svg>Call to order
+          </a>
         </li>
       </ul>
     </div>
